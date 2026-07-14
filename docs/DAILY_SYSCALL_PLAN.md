@@ -56,7 +56,7 @@
 
 | 天 | 数量 | 系统调用 | # | 当天重点 |
 |----|------|----------|---|----------|
-| Day 1 | 3 | `getpid` / `getppid` / `getuid` | 20 / 39 / 24 | 无参数、只读 `proc` |
+| Day 1 | 3 | `getpid` / `getppid` / `getuid` | 20 / 39 / 24 | 无参数、只读 `proc` → **正文：[day-01.md](day-01.md)** |
 | Day 2 | 3 | `geteuid` / `getgid` / `getegid` | 25 / 47 / 43 | 凭证字段从哪读 |
 | Day 3 | 2 | `issetugid` / `getdtablesize` | 327 / 89 | 安全标志；FD 表大小 |
 | Day 4 | 3 | `open` / `close` / `access` | 5 / 6 / 33 | 路径 → vnode；FD 分配/释放 |
@@ -155,7 +155,7 @@
 ## 现在就开始
 
 1. 做完 **第 0 天** 共用入口图  
-2. 今天起执行 **Day 1**：`getpid` / `getppid` / `getuid`  
-3. 新建 `notes/daily/day-01.md` 按模板填写  
+2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
+3. 对照填写 `notes/daily/day-01.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
