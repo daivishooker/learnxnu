@@ -5,6 +5,7 @@
 ## 第一天在这里（先点这个）
 
 - **Day 1 正文：** [docs/day-01.md](docs/day-01.md)（`getpid` / `getppid` / `getuid`）
+- **Day 1 源码分析：** [notes/daily/day-01-analysis.md](notes/daily/day-01-analysis.md)
 - Day 1 笔记： [notes/daily/day-01.md](notes/daily/day-01.md)
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 

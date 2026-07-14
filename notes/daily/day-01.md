@@ -1,6 +1,7 @@
 # Day 01 — getpid / getppid / getuid
 
 > **第一天正文（带源码指引）：** [docs/day-01.md](../../docs/day-01.md)  
+> **源码分析（对着 xnu 实读）：** [day-01-analysis.md](day-01-analysis.md)  
 > 源码树：`xnu/`（xnu-12377.121.6）
 
 下面是自学填写区；也可直接对照正文抄结论。
