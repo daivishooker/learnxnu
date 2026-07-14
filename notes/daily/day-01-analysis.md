@@ -224,3 +224,74 @@ kauth_cred_get(void)
 4. `xnu/libsyscall/custom/__getpid.s` — 用户态缓存捷径  
 
 读完这四个，Day 1 就算真正「对着源码懂了」。
+
+---
+
+## 8. FAQ：三个容易问的「为什么」
+
+### Q1：`getpid` 为什么要判断 `p == kernproc`？`getppid` 为什么直接返回？
+
+`getpid` 自己几乎不判断，判断在助手函数 `proc_getpid()` 里：
+
+```c
+pid_t
+proc_getpid(proc_t p)
+{
+	if (p == kernproc) {
+		return 0;
+	}
+	return p->p_pid;
+}
+```
+
+原因不是「用户态 getpid 会碰到内核进程」，而是：
+
+1. **`proc_getpid()` 是内核到处用的助手**，很多路径可能传入 `kernproc`（`kernel_task` 对应的假 BSD `proc`）。
+2. **约定：内核进程对外 PID 就是 0**。用指针判断强制这个语义，比「假设 `kernproc->p_pid` 碰巧是 0」更稳。
+3. 初始化里 `kernproc->p_pid` 基本是清零的，但助手仍显式特判，避免以后字段含义变化时内核各处报错 PID。
+
+`getppid` 则直接：
+
+```c
+*retval = p->p_ppid;
+```
+
+因为：
+
+1. 用户 syscall 进来的 `p` 一定是**当前用户进程**，不会是 `kernproc`。
+2. 父 PID 本来就是 `proc` 上的普通字段；`kernproc` 在 `bsd_init` 里父指针指自己，`p_ppid` 也是 0，没有「必须改写成别的数」的特殊契约。
+3. 没有像 `proc_getpid` 那样被全内核当成「统一取 PID」的入口去扛 `kernproc` 语义。
+
+一句话：**判断是为 `proc_getpid` 的内核通用语义服务的，不是 getpid 系统调用本身比 getppid 更娇气。**
+
+### Q2：`getuid` 为什么不直接读 `proc_t` 上的 `p_ruid`？
+
+`struct proc` 里确实有缓存字段：
+
+```c
+uid_t p_uid;   /* 常对应 effective */
+uid_t p_ruid;  /* real */
+uid_t p_svuid; /* saved */
+```
+
+它们由 `proc_update_creds_onproc()` 从 credential **抄一份**出来，方便 `proc_info` / 统计等快路径：
+
+```c
+p->p_ruid = kauth_cred_getruid(cred);
+```
+
+但 `getuid` 走的是：
+
+```c
+kauth_getruid()
+  → kauth_cred_get()          // current_thread_ro()->tro_cred
+  → kauth_cred_getruid(cred)  // posix_cred.cr_ruid
+```
+
+不读 `p->p_ruid`，因为：
+
+1. **真相在 `ucred` / kauth，不在 `proc` 缓存。** UID/GID、组列表、MAC label、audit 会话都挂在凭证对象上。
+2. **凭证可以是按线程的。** `kauth_cred_get()` 取的是**当前线程**的 `tro_cred`，不是「只看进程级缓存」。线程凭证被改过时，读 `p->p_ruid` 会错。
+3. **缓存可能滞后。** `p_ruid` 要等 `proc_update_creds_onproc` 同步；权限检查必须以 credential 为准。
+
+所以：`p_ruid` ≈ 进程级快照；`getuid` 要的是**当前执行上下文的真实 real uid**。
