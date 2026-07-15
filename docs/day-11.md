@@ -108,4 +108,4 @@ wait4 → wait4_nocancel
 - [ ] 能说 wait4 收僵尸  
 - [ ] 填好 `notes/daily/day-11.md`
 
-下一步：Day 12 → `execve` / `exit`
+下一步：Day 12 → [`execve` / `exit`](day-12.md)
