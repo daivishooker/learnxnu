@@ -156,7 +156,7 @@
 
 1. 做完 **第 0 天** 共用入口图  
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
-3. 接着 **[Day 2 正文](day-02.md)**：`geteuid` / `getgid` / `getegid`  
+3. **[Day 2](day-02.md)** → **[Day 3](day-03.md)**：`issetugid` / `getdtablesize`  
 4. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
