@@ -73,7 +73,7 @@
 | 天 | 数量 | 系统调用 | # | 当天重点 |
 |----|------|----------|---|----------|
 | Day 8 | 3 | `chdir` / `fchdir` / getcwd 相关* | 12 / 13 / — | 当前目录；*getcwd 非独立 syscall → **正文：[day-08.md](day-08.md)** |
-| Day 9 | 3 | `mkdir` / `rmdir` / `unlink` | 136 / 137 / 10 | 目录项变更 |
+| Day 9 | 3 | `mkdir` / `rmdir` / `unlink` | 136 / 137 / 10 | 目录项变更 → **正文：[day-09.md](day-09.md)** |
 | Day 10 | 2 | `rename` / `link` | 128 / 9 | 命名空间；硬链接 |
 | Day 11 | 3 | `fork` / `vfork` / `wait4` | 2 / 66 / 7 | 进程创建与等待；`proc`/`task` |
 | Day 12 | 2 | `execve` / `exit` | 59 / 1 | 地址空间替换；进程终结 |
