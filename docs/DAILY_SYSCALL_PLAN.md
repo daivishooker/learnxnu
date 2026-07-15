@@ -158,6 +158,6 @@
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
 3. 路径/命名空间后进入 **[Day 11](day-11.md)**：`fork` / `wait4`（进程）  
 4. 接着 **[Day 12](day-12.md)**：`execve` / `exit`（换程序与终结）  
-4. 对照填写 `notes/daily/day-0N.md`  
+5. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
