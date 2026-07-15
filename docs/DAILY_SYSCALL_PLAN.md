@@ -156,7 +156,7 @@
 
 1. 做完 **第 0 天** 共用入口图  
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
-3. 第 1 周 **[Day 7](day-07.md)** 收官后进入 **[Day 8](day-08.md)**：`chdir` / `fchdir`  
+3. 第 1 周 **[Day 7](day-07.md)** 收官后进入 **[Day 8](day-08.md)** → **[Day 9](day-09.md)**：`mkdir` / `rmdir` / `unlink`  
 4. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
