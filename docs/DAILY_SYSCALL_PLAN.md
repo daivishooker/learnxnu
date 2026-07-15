@@ -62,7 +62,7 @@
 | Day 4 | 3 | `open` / `close` / `access` | 5 / 6 / 33 | 路径 → vnode；FD 分配/释放 → **正文：[day-04.md](day-04.md)** |
 | Day 5 | 3 | `read` / `write` / `lseek` | 3 / 4 / 199 | `fileproc`、UIO、偏移 → **正文：[day-05.md](day-05.md)** |
 | Day 6 | 2 | `dup` / `dup2` | 41 / 90 | FD 表操作 → **正文：[day-06.md](day-06.md)** |
-| Day 7 | 3 | `stat64` / `fstat64` / `lstat64` | 338 / 339 / 340 | 元数据；路径 vs FD vs 不跟随链接 |
+| Day 7 | 3 | `stat64` / `fstat64` / `lstat64` | 338 / 339 / 340 | 元数据；路径 vs FD vs 不跟随链接 → **正文：[day-07.md](day-07.md)** |
 
 **第 1 周验收：** 能独立讲清 `open → read → close` 三条链，并指出 `getpid` 与 `open` 复杂度差在哪。
 
@@ -156,7 +156,7 @@
 
 1. 做完 **第 0 天** 共用入口图  
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
-3. **[Day 2](day-02.md)** → … → **[Day 6](day-06.md)**：`dup` / `dup2`  
+3. **[Day 2](day-02.md)** → … → **[Day 7](day-07.md)**：`stat64` / `fstat64` / `lstat64`（第 1 周收官）  
 4. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

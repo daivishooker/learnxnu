@@ -2,7 +2,7 @@
 
 学习 Apple XNU 内核的笔记与源码仓库。
 
-## Day 1–6 在这里
+## Day 1–7 在这里（第 1 周）
 
 - **Day 1：** [docs/day-01.md](docs/day-01.md) · [分析](notes/daily/day-01-analysis.md)（`getpid` / `getppid` / `getuid`）
 - **Day 2：** [docs/day-02.md](docs/day-02.md) · [分析](notes/daily/day-02-analysis.md)（`geteuid` / `getgid` / `getegid`）
@@ -10,6 +10,7 @@
 - **Day 4：** [docs/day-04.md](docs/day-04.md) · [分析](notes/daily/day-04-analysis.md)（`open` / `close` / `access`）
 - **Day 5：** [docs/day-05.md](docs/day-05.md) · [分析](notes/daily/day-05-analysis.md)（`read` / `write` / `lseek`）
 - **Day 6：** [docs/day-06.md](docs/day-06.md) · [分析](notes/daily/day-06-analysis.md)（`dup` / `dup2`）
+- **Day 7：** [docs/day-07.md](docs/day-07.md) · [分析](notes/daily/day-07-analysis.md)（`stat64` / `fstat64` / `lstat64`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
