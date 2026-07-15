@@ -58,7 +58,7 @@
 |----|------|----------|---|----------|
 | Day 1 | 3 | `getpid` / `getppid` / `getuid` | 20 / 39 / 24 | 无参数、只读 `proc` → **正文：[day-01.md](day-01.md)** |
 | Day 2 | 3 | `geteuid` / `getgid` / `getegid` | 25 / 47 / 43 | 凭证字段从哪读 → **正文：[day-02.md](day-02.md)** |
-| Day 3 | 2 | `issetugid` / `getdtablesize` | 327 / 89 | 安全标志；FD 表大小 |
+| Day 3 | 2 | `issetugid` / `getdtablesize` | 327 / 89 | 安全标志；FD 表大小 → **正文：[day-03.md](day-03.md)** |
 | Day 4 | 3 | `open` / `close` / `access` | 5 / 6 / 33 | 路径 → vnode；FD 分配/释放 |
 | Day 5 | 3 | `read` / `write` / `lseek` | 3 / 4 / 199 | `fileproc`、UIO、偏移 |
 | Day 6 | 2 | `dup` / `dup2` | 41 / 90 | FD 表操作 |
