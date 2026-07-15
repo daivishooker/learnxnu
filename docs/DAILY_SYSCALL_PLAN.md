@@ -72,7 +72,7 @@
 
 | 天 | 数量 | 系统调用 | # | 当天重点 |
 |----|------|----------|---|----------|
-| Day 8 | 3 | `chdir` / `fchdir` / `getcwd` 相关* | 12 / 13 / — | 当前目录；*若 `getcwd` 非直接 syscall，记清用户态如何拼 |
+| Day 8 | 3 | `chdir` / `fchdir` / getcwd 相关* | 12 / 13 / — | 当前目录；*getcwd 非独立 syscall → **正文：[day-08.md](day-08.md)** |
 | Day 9 | 3 | `mkdir` / `rmdir` / `unlink` | 136 / 137 / 10 | 目录项变更 |
 | Day 10 | 2 | `rename` / `link` | 128 / 9 | 命名空间；硬链接 |
 | Day 11 | 3 | `fork` / `vfork` / `wait4` | 2 / 66 / 7 | 进程创建与等待；`proc`/`task` |
@@ -156,7 +156,7 @@
 
 1. 做完 **第 0 天** 共用入口图  
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
-3. **[Day 2](day-02.md)** → … → **[Day 7](day-07.md)**：`stat64` / `fstat64` / `lstat64`（第 1 周收官）  
+3. 第 1 周 **[Day 7](day-07.md)** 收官后进入 **[Day 8](day-08.md)**：`chdir` / `fchdir`  
 4. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
