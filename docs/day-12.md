@@ -109,4 +109,4 @@ exit1 → exit_with_reason
 - [ ] 能说 exit：终结 → 僵尸 → SIGCHLD  
 - [ ] 填好 `notes/daily/day-12.md`
 
-下一步：Day 13 → `posix_spawn` / `kill`
+下一步：Day 13 → [`posix_spawn` / `kill`](day-13.md)

@@ -77,7 +77,7 @@
 | Day 10 | 2 | `rename` / `link` | 128 / 9 | 命名空间；硬链接 → **正文：[day-10.md](day-10.md)** |
 | Day 11 | 3 | `fork` / `vfork` / `wait4` | 2 / 66 / 7 | 进程创建与等待；`proc`/`task` → **正文：[day-11.md](day-11.md)** |
 | Day 12 | 2 | `execve` / `exit` | 59 / 1 | 地址空间替换；进程终结 → **正文：[day-12.md](day-12.md)** |
-| Day 13 | 2 | `posix_spawn` / `kill` | 244 / 37 | 现代创建进程；信号投递入口 |
+| Day 13 | 2 | `posix_spawn` / `kill` | 244 / 37 | 现代创建进程；信号投递入口 → **正文：[day-13.md](day-13.md)** |
 | Day 14 | 3 | `pipe` / `fcntl` / `fsync` | 42 / 92 / 95 | 管道两端；FD 控制；刷盘 |
 
 **第 2 周验收：** 能画 `fork → execve → wait4` 与 `posix_spawn` 的对比图。
@@ -158,6 +158,7 @@
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
 3. 路径/命名空间后进入 **[Day 11](day-11.md)**：`fork` / `wait4`（进程）  
 4. 接着 **[Day 12](day-12.md)**：`execve` / `exit`（换程序与终结）  
-5. 对照填写 `notes/daily/day-0N.md`  
+5. 再进入 **[Day 13](day-13.md)**：`posix_spawn` / `kill`  
+6. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
