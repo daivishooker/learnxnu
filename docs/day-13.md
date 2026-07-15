@@ -114,4 +114,4 @@ kill(调用者, pid, signum, posix) {
 - [ ] 能说 kill → cansignal → psignal  
 - [ ] 填好 `notes/daily/day-13.md`
 
-下一步：Day 14 → `pipe` / `fcntl` / `fsync`
+下一步：Day 14 → [`pipe` / `fcntl` / `fsync`](day-14.md)
