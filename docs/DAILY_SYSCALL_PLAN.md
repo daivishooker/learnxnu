@@ -75,7 +75,7 @@
 | Day 8 | 3 | `chdir` / `fchdir` / getcwd 相关* | 12 / 13 / — | 当前目录；*getcwd 非独立 syscall → **正文：[day-08.md](day-08.md)** |
 | Day 9 | 3 | `mkdir` / `rmdir` / `unlink` | 136 / 137 / 10 | 目录项变更 → **正文：[day-09.md](day-09.md)** |
 | Day 10 | 2 | `rename` / `link` | 128 / 9 | 命名空间；硬链接 → **正文：[day-10.md](day-10.md)** |
-| Day 11 | 3 | `fork` / `vfork` / `wait4` | 2 / 66 / 7 | 进程创建与等待；`proc`/`task` |
+| Day 11 | 3 | `fork` / `vfork` / `wait4` | 2 / 66 / 7 | 进程创建与等待；`proc`/`task` → **正文：[day-11.md](day-11.md)** |
 | Day 12 | 2 | `execve` / `exit` | 59 / 1 | 地址空间替换；进程终结 |
 | Day 13 | 2 | `posix_spawn` / `kill` | 244 / 37 | 现代创建进程；信号投递入口 |
 | Day 14 | 3 | `pipe` / `fcntl` / `fsync` | 42 / 92 / 95 | 管道两端；FD 控制；刷盘 |
@@ -156,7 +156,7 @@
 
 1. 做完 **第 0 天** 共用入口图  
 2. 打开 **[Day 1 正文](day-01.md)**：`getpid` / `getppid` / `getuid`  
-3. 第 1 周后进入 **[Day 8](day-08.md)** → … → **[Day 10](day-10.md)**：`link` / `rename`  
+3. 路径/命名空间后进入 **[Day 11](day-11.md)**：`fork` / `wait4`（进程）  
 4. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
