@@ -86,6 +86,35 @@ fstatfs64(fd, buf) {
 
 ---
 
+## 用户层 Demo
+
+`statfs`/`fstatfs` 读文件系统统计（用户层常见封装；内核侧对应 `statfs64`/`fstatfs64`）。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <sys/mount.h>
+#include <sys/param.h>
+#include <unistd.h>
+
+int main(void) {
+    struct statfs s;
+    if (statfs("/", &s) == 0)
+        printf("fstyp=%s blocks=%llu bfree=%llu\n",
+               s.f_fstypename,
+               (unsigned long long)s.f_blocks,
+               (unsigned long long)s.f_bfree);
+    int fd = open("/", O_RDONLY);
+    if (fd >= 0) {
+        fstatfs(fd, &s);
+        close(fd);
+    }
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 345 / 346  

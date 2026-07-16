@@ -86,6 +86,30 @@ sys_dup2 → dup2(p, cred, from, to, retval)
 
 ---
 
+## 用户层 Demo
+
+`dup`/`dup2` 复制 FD；两者共享同一打开文件描述（含偏移）。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = open("/tmp/day06.txt", O_RDWR | O_CREAT | O_TRUNC, 0644);
+    int a = dup(fd);
+    int b = dup2(fd, 10);
+    write(fd, "A", 1);
+    write(a, "B", 1);
+    write(b, "C", 1);
+    printf("fd=%d dup=%d dup2=%d\n", fd, a, b);
+    close(fd); close(a); close(b);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 41 / 90  

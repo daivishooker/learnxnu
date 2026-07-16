@@ -107,6 +107,33 @@ fsync → fsync_common(..., MNT_WAIT)
 
 ---
 
+## 用户层 Demo
+
+`pipe` 造一对 FD；`fcntl` 设 `O_NONBLOCK`；`fsync` 落盘（此处对写端文件演示）。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int pfd[2];
+    if (pipe(pfd) != 0) { perror("pipe"); return 1; }
+    fcntl(pfd[0], F_SETFL, O_NONBLOCK);
+    write(pfd[1], "hi", 2);
+    char buf[8];
+    ssize_t n = read(pfd[0], buf, sizeof(buf));
+    printf("read %zd\n", n);
+    int fd = open("/tmp/day14.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+    write(fd, "x", 1);
+    fsync(fd);
+    close(fd); close(pfd[0]); close(pfd[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 42 / 92 / 95  

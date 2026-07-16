@@ -139,6 +139,31 @@ socketpair(domain, type, protocol, int sv[2]) {
 
 ---
 
+## 用户层 Demo
+
+`socketpair` 最快练 `accept`/`connect` 语义的近亲；也可用 listen+connect+accept 三件套。
+
+```c
+#include <stdio.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int main(void) {
+    int sv[2];
+    if (socketpair(AF_UNIX, SOCK_STREAM, 0, sv) != 0) {
+        perror("socketpair"); return 1;
+    }
+    write(sv[0], "hi", 2);
+    char buf[8] = {0};
+    read(sv[1], buf, sizeof(buf) - 1);
+    printf("got=%s\n", buf);
+    close(sv[0]); close(sv[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 30 / 98 / 135  

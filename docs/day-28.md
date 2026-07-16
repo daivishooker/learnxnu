@@ -90,6 +90,31 @@ socket → bind → listen（SO_ACCEPTCONN，开排队）
 
 ---
 
+## 用户层 Demo
+
+第 4 周回顾：用一个小草图串起 `socketpair` + `getsockname`（本地名）与半关闭，细节见 Day 22–25 / 29。
+
+```c
+#include <stdio.h>
+#include <sys/socket.h>
+#include <sys/un.h>
+#include <unistd.h>
+
+int main(void) {
+    int sv[2];
+    socketpair(AF_UNIX, SOCK_STREAM, 0, sv);
+    struct sockaddr_storage ss;
+    socklen_t sl = sizeof(ss);
+    if (getsockname(sv[0], (struct sockaddr *)&ss, &sl) == 0)
+        printf("getsockname family=%d len=%u\n", ss.ss_family, sl);
+    shutdown(sv[0], SHUT_WR);
+    close(sv[0]); close(sv[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 能画 FD / 地址两条索引  

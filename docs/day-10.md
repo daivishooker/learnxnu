@@ -92,6 +92,28 @@ from 路径的目录项  →  挪到 to 这个名字下
 
 ---
 
+## 用户层 Demo
+
+`link` 增加硬链接名；`rename` 原子改名（同文件系统内）。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = open("/tmp/day10-a", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+    if (fd >= 0) { write(fd, "x", 1); close(fd); }
+    if (link("/tmp/day10-a", "/tmp/day10-b") != 0) perror("link");
+    if (rename("/tmp/day10-b", "/tmp/day10-c") != 0) perror("rename");
+    unlink("/tmp/day10-a");
+    unlink("/tmp/day10-c");
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 9 / 128  

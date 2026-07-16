@@ -123,6 +123,32 @@ kevent64/qos    → 同一模型，结构与系统集成升级
 
 ---
 
+## 用户层 Demo
+
+经典 `kqueue`/`kevent` 监视 FD 可读；`kevent64`/`kevent_qos` 是同族扩展接口，用法骨架类似。
+
+```c
+#include <sys/event.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int pfd[2]; pipe(pfd);
+    write(pfd[1], "x", 1);
+    int kq = kqueue();
+    struct kevent ch, ev;
+    EV_SET(&ch, pfd[0], EVFILT_READ, EV_ADD | EV_ENABLE, 0, 0, NULL);
+    kevent(kq, &ch, 1, NULL, 0, NULL);
+    if (kevent(kq, NULL, 0, &ev, 1, NULL) == 1)
+        printf("kevent ident=%lu data=%ld\n",
+               (unsigned long)ev.ident, (long)ev.data);
+    close(kq); close(pfd[0]); close(pfd[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 369 / 374  

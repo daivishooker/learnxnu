@@ -102,6 +102,32 @@ sysctl(name[], namelen, old, oldlenp, new, newlen) {
 
 ---
 
+## 用户层 Demo
+
+`ptrace` 在 macOS 上常用于防调试探测；`sysctl` 读进程信息作对照。示例只做只读探测，不 attach 别人。
+
+```c
+#include <stdio.h>
+#include <sys/sysctl.h>
+#include <sys/types.h>
+#include <unistd.h>
+/* #include <sys/ptrace.h>  — Apple: PT_DENY_ATTACH */
+
+int main(void) {
+    /* 可选：ptrace(PT_DENY_ATTACH, 0, 0, 0); */
+    int mib[4] = { CTL_KERN, KERN_PROC, KERN_PROC_PID, getpid() };
+    struct kinfo_proc kp;
+    size_t len = sizeof(kp);
+    if (sysctl(mib, 4, &kp, &len, NULL, 0) == 0)
+        printf("self pid=%d\n", kp.kp_proc.p_pid);
+    else
+        perror("sysctl");
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 26 / 202  

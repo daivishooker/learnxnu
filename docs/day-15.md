@@ -105,6 +105,31 @@ mprotect(addr, len, prot) {
 
 ---
 
+## 用户层 Demo
+
+匿名 `mmap` 一块可读写内存，`mprotect` 改成只读，最后 `munmap`。
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <unistd.h>
+
+int main(void) {
+    size_t len = (size_t)getpagesize();
+    void *p = mmap(NULL, len, PROT_READ | PROT_WRITE,
+                   MAP_ANON | MAP_PRIVATE, -1, 0);
+    if (p == MAP_FAILED) { perror("mmap"); return 1; }
+    memcpy(p, "ok", 3);
+    if (mprotect(p, len, PROT_READ) != 0) perror("mprotect");
+    printf("%s\n", (char *)p);
+    munmap(p, len);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 197 / 73 / 74  

@@ -114,6 +114,29 @@ setpriority(PRIO_PROCESS, 0, n) → donice → p_nice → resetpriority
 
 ---
 
+## 用户层 Demo
+
+`getpriority`/`setpriority` 调进程 nice；需要权限时 `setpriority` 可能失败。
+
+```c
+#include <errno.h>
+#include <stdio.h>
+#include <sys/resource.h>
+#include <unistd.h>
+
+int main(void) {
+    int nice = getpriority(PRIO_PROCESS, 0);
+    printf("priority=%d\n", nice);
+    if (setpriority(PRIO_PROCESS, 0, nice + 1) != 0)
+        perror("setpriority");
+    else
+        printf("now=%d\n", getpriority(PRIO_PROCESS, 0));
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 100 / 96  

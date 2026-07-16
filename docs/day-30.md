@@ -101,6 +101,29 @@ gettimeofday  → 问「现在系统认为几点」
 
 ---
 
+## 用户层 Demo
+
+`gettimeofday` 读墙钟；`getrusage` 看本进程用户/系统 CPU 时间。
+
+```c
+#include <stdio.h>
+#include <sys/resource.h>
+#include <sys/time.h>
+
+int main(void) {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    printf("sec=%ld usec=%d\n", (long)tv.tv_sec, (int)tv.tv_usec);
+    struct rusage ru;
+    getrusage(RUSAGE_SELF, &ru);
+    printf("utime=%ld.%06d\n",
+           (long)ru.ru_utime.tv_sec, (int)ru.ru_utime.tv_usec);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 117 / 116  

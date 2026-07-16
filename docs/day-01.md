@@ -138,6 +138,23 @@ getuid(__unused proc_t p, __unused struct getuid_args *uap, int32_t *retval)
 
 ---
 
+## 用户层 Demo
+
+用 libc 直接读进程身份：无参数、只返回整数，对应今天内核里写 `*retval` 的三个调用。
+
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    printf("pid=%d ppid=%d uid=%d\n",
+           getpid(), getppid(), getuid());
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 在 `syscalls.master` 找到 20 / 39 / 24  

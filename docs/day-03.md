@@ -99,6 +99,23 @@ sys_getdtablesize(proc_t p, ..., int32_t *retval)
 
 ---
 
+## 用户层 Demo
+
+`issetugid` 判断进程是否曾提权；`getdtablesize` 给出 FD 表上限（常与 `RLIMIT_NOFILE` 相关）。
+
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    printf("issetugid=%d dtablesize=%d\n",
+           issetugid(), getdtablesize());
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 327 / 89  

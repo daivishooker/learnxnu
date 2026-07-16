@@ -109,6 +109,33 @@ madvise(addr, len, behav)
 
 ---
 
+## 用户层 Demo
+
+文件映射后改内容，用 `msync` 刷回；`madvise` 给内核使用提示。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <unistd.h>
+
+int main(void) {
+    size_t len = (size_t)getpagesize();
+    int fd = open("/tmp/day16.bin", O_RDWR | O_CREAT | O_TRUNC, 0644);
+    ftruncate(fd, (off_t)len);
+    void *p = mmap(NULL, len, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    if (p == MAP_FAILED) { perror("mmap"); return 1; }
+    memcpy(p, "msync", 5);
+    madvise(p, len, MADV_SEQUENTIAL);
+    if (msync(p, len, MS_SYNC) != 0) perror("msync");
+    munmap(p, len); close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 65 / 75  

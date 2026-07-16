@@ -121,6 +121,31 @@ socket → bind → listen → accept/connect
 
 ---
 
+## 用户层 Demo
+
+`shutdown(SHUT_WR)` 半关闭写端，对端读到 EOF；最后再 `close` 释放 FD。
+
+```c
+#include <stdio.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int main(void) {
+    int sv[2];
+    socketpair(AF_UNIX, SOCK_STREAM, 0, sv);
+    write(sv[0], "x", 1);
+    shutdown(sv[0], SHUT_WR);
+    char buf[8];
+    ssize_t n1 = read(sv[1], buf, sizeof(buf));
+    ssize_t n2 = read(sv[1], buf, sizeof(buf)); /* EOF → 0 */
+    printf("n1=%zd n2=%zd\n", n1, n2);
+    close(sv[0]); close(sv[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 134 / 6  

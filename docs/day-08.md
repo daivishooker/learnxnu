@@ -86,6 +86,33 @@ Darwin 上常见做法（概念）：
 
 ---
 
+## 用户层 Demo
+
+`chdir` 改进程 CWD；`fchdir` 用目录 FD，避免路径竞争。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    char cwd[1024];
+    if (chdir("/tmp") != 0) { perror("chdir"); return 1; }
+    getcwd(cwd, sizeof(cwd));
+    printf("after chdir: %s\n", cwd);
+    int dfd = open("/usr", O_RDONLY | O_DIRECTORY);
+    if (dfd >= 0) {
+        fchdir(dfd);
+        getcwd(cwd, sizeof(cwd));
+        printf("after fchdir: %s\n", cwd);
+        close(dfd);
+    }
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 12 / 13  

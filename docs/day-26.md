@@ -122,6 +122,34 @@ mmap(..., fd, ...) {
 
 ---
 
+## 用户层 Demo
+
+POSIX 共享内存：`shm_open` → `ftruncate` → `mmap`，用完 `shm_unlink`。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main(void) {
+    const char *name = "/day26demo";
+    int fd = shm_open(name, O_CREAT | O_RDWR, 0600);
+    if (fd < 0) { perror("shm_open"); return 1; }
+    ftruncate(fd, 4096);
+    void *p = mmap(NULL, 4096, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    memcpy(p, "shm", 4);
+    printf("%s\n", (char *)p);
+    munmap(p, 4096); close(fd);
+    shm_unlink(name);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 266 / 267 / 197  

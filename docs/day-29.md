@@ -109,6 +109,38 @@ bind / connect / accept 之后：
 
 ---
 
+## 用户层 Demo
+
+`getsockname`/`getpeername` 查本地/对端地址；`setsockopt` 调 `SO_REUSEADDR`。
+
+```c
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    int on = 1;
+    setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on));
+    struct sockaddr_in a = {0};
+    a.sin_family = AF_INET;
+    a.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    a.sin_port = htons(0);
+    bind(fd, (struct sockaddr *)&a, sizeof(a));
+    socklen_t len = sizeof(a);
+    getsockname(fd, (struct sockaddr *)&a, &len);
+    printf("bound port=%u\n", ntohs(a.sin_port));
+    /* connect 后再 getpeername */
+    close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 32 / 31 / 105  

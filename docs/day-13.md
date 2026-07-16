@@ -107,6 +107,34 @@ kill(调用者, pid, signum, posix) {
 
 ---
 
+## 用户层 Demo
+
+`posix_spawn` 一次拉起进程；`kill` 发信号（这里对刚 spawn 的子进程发 `SIGTERM` 前先等它自己结束更安全，示例仅展示 API）。
+
+```c
+#include <errno.h>
+#include <signal.h>
+#include <spawn.h>
+#include <stdio.h>
+#include <sys/wait.h>
+
+extern char **environ;
+
+int main(void) {
+    pid_t pid = 0;
+    char *argv[] = { "/usr/bin/true", NULL };
+    int rc = posix_spawn(&pid, argv[0], NULL, NULL, argv, environ);
+    if (rc != 0) { errno = rc; perror("posix_spawn"); return 1; }
+    int st;
+    waitpid(pid, &st, 0);
+    /* kill(pid, SIGTERM); — 子进程已结束后无意义，仅作 API 对照 */
+    printf("spawned pid was %d\n", (int)pid);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 244 / 37  

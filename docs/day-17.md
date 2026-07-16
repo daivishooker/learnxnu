@@ -121,6 +121,36 @@ kill 投递 → 若被 mask：进 pending
 
 ---
 
+## 用户层 Demo
+
+`sigaction` 注册处理函数，`sigprocmask` 阻塞后再 `sigpending` 查看挂起集。
+
+```c
+#include <signal.h>
+#include <stdio.h>
+#include <unistd.h>
+
+static void on_usr1(int sig) { (void)sig; write(STDOUT_FILENO, "USR1\n", 5); }
+
+int main(void) {
+    struct sigaction sa = {0};
+    sa.sa_handler = on_usr1;
+    sigaction(SIGUSR1, &sa, NULL);
+
+    sigset_t set, pending;
+    sigemptyset(&set);
+    sigaddset(&set, SIGUSR1);
+    sigprocmask(SIG_BLOCK, &set, NULL);
+    raise(SIGUSR1);
+    sigpending(&pending);
+    printf("pending USR1=%d\n", sigismember(&pending, SIGUSR1));
+    sigprocmask(SIG_UNBLOCK, &set, NULL);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 46 / 48 / 52  

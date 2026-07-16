@@ -102,6 +102,30 @@ getrusage 不直接等于「现在开了几个」；那是另一类统计/计数
 
 ---
 
+## 用户层 Demo
+
+先 `getrlimit` 再尝试降低 `RLIMIT_NOFILE` 软限制（勿把硬限制乱抬高）。
+
+```c
+#include <stdio.h>
+#include <sys/resource.h>
+
+int main(void) {
+    struct rlimit rl;
+    if (getrlimit(RLIMIT_NOFILE, &rl) != 0) { perror("getrlimit"); return 1; }
+    printf("nofile soft=%llu hard=%llu\n",
+           (unsigned long long)rl.rlim_cur,
+           (unsigned long long)rl.rlim_max);
+    if (rl.rlim_cur > 32) {
+        rl.rlim_cur = 32;
+        if (setrlimit(RLIMIT_NOFILE, &rl) != 0) perror("setrlimit");
+    }
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 195 / 194  

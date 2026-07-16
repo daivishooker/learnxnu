@@ -132,6 +132,40 @@ getsockopt(s, level, name, val, valsize) {
 
 ---
 
+## 用户层 Demo
+
+`sendmsg`/`recvmsg` 走 `msghdr`+`iovec`；`getsockopt` 读回 `SO_TYPE`。
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int main(void) {
+    int sv[2];
+    socketpair(AF_UNIX, SOCK_STREAM, 0, sv);
+    char data[] = "msg";
+    struct iovec iov = { .iov_base = data, .iov_len = 3 };
+    struct msghdr mh = {0};
+    mh.msg_iov = &iov; mh.msg_iovlen = 1;
+    sendmsg(sv[0], &mh, 0);
+
+    char buf[8] = {0};
+    struct iovec riov = { .iov_base = buf, .iov_len = sizeof(buf) - 1 };
+    struct msghdr rmh = {0};
+    rmh.msg_iov = &riov; rmh.msg_iovlen = 1;
+    recvmsg(sv[1], &rmh, 0);
+    int type = 0; socklen_t len = sizeof(type);
+    getsockopt(sv[0], SOL_SOCKET, SO_TYPE, &type, &len);
+    printf("recv=%s type=%d\n", buf, type);
+    close(sv[0]); close(sv[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 28 / 27 / 118  

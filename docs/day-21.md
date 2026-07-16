@@ -112,6 +112,35 @@ getrlimit(which, rlp) {
 
 ---
 
+## 用户层 Demo
+
+`sysctl` 读内核字符串；`getrlimit` 看资源上限；`ioctl` 示例用 `TIOCGWINSZ`（需 tty）。
+
+```c
+#include <stdio.h>
+#include <sys/ioctl.h>
+#include <sys/resource.h>
+#include <sys/sysctl.h>
+#include <unistd.h>
+
+int main(void) {
+    char os[256];
+    size_t len = sizeof(os);
+    int mib[2] = { CTL_KERN, KERN_OSRELEASE };
+    if (sysctl(mib, 2, os, &len, NULL, 0) == 0)
+        printf("osrelease=%s\n", os);
+    struct rlimit rl;
+    getrlimit(RLIMIT_NOFILE, &rl);
+    printf("nofile soft=%llu\n", (unsigned long long)rl.rlim_cur);
+    struct winsize ws;
+    if (ioctl(STDOUT_FILENO, TIOCGWINSZ, &ws) == 0)
+        printf("winsize %ux%u\n", ws.ws_col, ws.ws_row);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 54 / 202 / 194  

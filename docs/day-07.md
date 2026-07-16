@@ -99,6 +99,33 @@ sys_fstat64(...) {
 
 ---
 
+## 用户层 Demo
+
+`stat`/`lstat`/`fstat` 填 `struct stat`；符号链接上 `lstat` 与 `stat` 会分叉。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
+
+int main(void) {
+    struct stat st;
+    const char *p = "/tmp";
+    if (stat(p, &st) == 0)
+        printf("stat size=%lld mode=%o\n",
+               (long long)st.st_size, st.st_mode & 07777);
+    int fd = open(p, O_RDONLY);
+    if (fd >= 0 && fstat(fd, &st) == 0)
+        printf("fstat ino=%llu\n", (unsigned long long)st.st_ino);
+    if (fd >= 0) close(fd);
+    lstat(p, &st); /* 对 symlink 才与 stat 不同 */
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 338 / 339 / 340  

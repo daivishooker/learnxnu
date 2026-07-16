@@ -83,6 +83,33 @@ sys_flock(fd, how) {
 
 ---
 
+## 用户层 Demo
+
+`flock` 对打开文件加咨询锁；`LOCK_EX|LOCK_NB` 非阻塞排他锁。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <sys/file.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = open("/tmp/day33.lock", O_CREAT | O_RDWR, 0644);
+    if (fd < 0) { perror("open"); return 1; }
+    if (flock(fd, LOCK_EX | LOCK_NB) != 0) {
+        perror("flock");
+        close(fd);
+        return 1;
+    }
+    printf("locked\n");
+    flock(fd, LOCK_UN);
+    close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 131  

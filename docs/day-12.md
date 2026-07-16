@@ -102,6 +102,32 @@ exit1 → exit_with_reason
 
 ---
 
+## 用户层 Demo
+
+子进程 `execve` 替换映像；失败则 `_exit`。父进程等待即可观察。
+
+```c
+#include <stdio.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main(void) {
+    pid_t pid = fork();
+    if (pid == 0) {
+        char *argv[] = { "/usr/bin/true", NULL };
+        char *envp[] = { NULL };
+        execve(argv[0], argv, envp);
+        _exit(127);
+    }
+    int st;
+    waitpid(pid, &st, 0);
+    printf("execve done, status=%d\n", st);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 59 / 1  

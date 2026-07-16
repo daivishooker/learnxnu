@@ -101,6 +101,32 @@ wait4 → wait4_nocancel
 
 ---
 
+## 用户层 Demo
+
+`fork` 后子进程 `_exit`，父进程 `wait4` 收尸；`vfork` 语义更严，日常优先 `fork`。
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main(void) {
+    pid_t pid = fork();
+    if (pid < 0) { perror("fork"); return 1; }
+    if (pid == 0) {
+        _exit(42);
+    }
+    int status = 0;
+    if (wait4(pid, &status, 0, NULL) < 0) { perror("wait4"); return 1; }
+    if (WIFEXITED(status))
+        printf("child exit=%d\n", WEXITSTATUS(status));
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 2 / 7 / 66  

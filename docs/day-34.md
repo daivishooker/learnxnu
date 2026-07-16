@@ -93,6 +93,28 @@ sync()    → 尽量让各文件系统脏数据推进去
 
 ---
 
+## 用户层 Demo
+
+`fsync` 刷单个 FD；`sync` 请求更广的脏页回写（无参数）。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = open("/tmp/day34.txt", O_CREAT | O_WRONLY | O_TRUNC, 0644);
+    write(fd, "sync-me", 7);
+    if (fsync(fd) != 0) perror("fsync");
+    sync();
+    close(fd);
+    printf("fsync+sync done\n");
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 36 / 95  

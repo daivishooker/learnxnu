@@ -107,6 +107,37 @@ __pthread_kill(thread_port, sig) {
 
 ---
 
+## 用户层 Demo
+
+`sigaltstack` 备好备用栈；同进程内用 `pthread_kill` 给当前线程发信号（用户层入口，内核侧对应 `__pthread_kill`）。
+
+```c
+#include <pthread.h>
+#include <signal.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+static void on_usr1(int sig) { (void)sig; write(STDOUT_FILENO, "alt\n", 4); }
+
+int main(void) {
+    stack_t ss = {0};
+    ss.ss_sp = malloc(SIGSTKSZ);
+    ss.ss_size = SIGSTKSZ;
+    if (sigaltstack(&ss, NULL) != 0) { perror("sigaltstack"); return 1; }
+
+    struct sigaction sa = {0};
+    sa.sa_handler = on_usr1;
+    sa.sa_flags = SA_ONSTACK;
+    sigaction(SIGUSR1, &sa, NULL);
+    pthread_kill(pthread_self(), SIGUSR1);
+    free(ss.ss_sp);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 53 / 328  

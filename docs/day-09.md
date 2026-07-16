@@ -91,6 +91,28 @@ unlink(...) {
 
 ---
 
+## 用户层 Demo
+
+目录与文件生命周期：`mkdir` → 建文件 → `unlink` → `rmdir`。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/stat.h>
+
+int main(void) {
+    if (mkdir("/tmp/day09d", 0755) != 0) perror("mkdir");
+    int fd = open("/tmp/day09d/a.txt", O_CREAT | O_WRONLY, 0644);
+    if (fd >= 0) close(fd);
+    if (unlink("/tmp/day09d/a.txt") != 0) perror("unlink");
+    if (rmdir("/tmp/day09d") != 0) perror("rmdir");
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 10 / 136 / 137  

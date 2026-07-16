@@ -120,6 +120,28 @@ access(...) {
 
 ---
 
+## 用户层 Demo
+
+`access` 先探权限，再 `open`/`close`；失败路径用 `perror` 看 errno。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    const char *path = "/tmp/day04-demo.txt";
+    if (access(path, F_OK) != 0)
+        perror("access(F_OK)");
+    int fd = open(path, O_CREAT | O_WRONLY | O_TRUNC, 0644);
+    if (fd < 0) { perror("open"); return 1; }
+    close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 5 / 6 / 33  

@@ -113,6 +113,39 @@ socket() → bind(本地地址) → listen(backlog)
 
 ---
 
+## 用户层 Demo
+
+本地 TCP：`socket` → `bind` → `listen`，为后续 `accept` 做准备。
+
+```c
+#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <stdio.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <unistd.h>
+
+int main(void) {
+    int fd = socket(AF_INET, SOCK_STREAM, 0);
+    int on = 1;
+    setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(on));
+    struct sockaddr_in addr;
+    memset(&addr, 0, sizeof(addr));
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
+    addr.sin_port = htons(0); /* 让内核分配 */
+    if (bind(fd, (struct sockaddr *)&addr, sizeof(addr)) != 0) {
+        perror("bind"); return 1;
+    }
+    listen(fd, 1);
+    printf("listening fd=%d\n", fd);
+    close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 97 / 104 / 106  

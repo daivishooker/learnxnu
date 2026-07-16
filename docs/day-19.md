@@ -110,6 +110,29 @@ kevent  持久队列 + 过滤器；现代服务器常用
 
 ---
 
+## 用户层 Demo
+
+`pipe` + `poll` 等可读；同场景也可用 `select`/`kqueue`+`kevent`（此处用 `poll` 最短路径）。
+
+```c
+#include <poll.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    int pfd[2];
+    pipe(pfd);
+    write(pfd[1], "x", 1);
+    struct pollfd p = { .fd = pfd[0], .events = POLLIN };
+    if (poll(&p, 1, 1000) > 0 && (p.revents & POLLIN))
+        printf("poll: readable\n");
+    close(pfd[0]); close(pfd[1]);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 93 / 230 / 363  

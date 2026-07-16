@@ -113,6 +113,31 @@ lseek(...) {
 
 ---
 
+## 用户层 Demo
+
+`write` 写入、`lseek` 回绕、`read` 读回，对应文件偏移在 `fileglob` 上推进。
+
+```c
+#include <fcntl.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+
+int main(void) {
+    char buf[64];
+    int fd = open("/tmp/day05.bin", O_RDWR | O_CREAT | O_TRUNC, 0644);
+    if (fd < 0) { perror("open"); return 1; }
+    write(fd, "hello", 5);
+    lseek(fd, 0, SEEK_SET);
+    ssize_t n = read(fd, buf, sizeof(buf) - 1);
+    if (n > 0) { buf[n] = '\0'; printf("%s\n", buf); }
+    close(fd);
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 3 / 4 / 199  

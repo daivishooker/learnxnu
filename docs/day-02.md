@@ -101,6 +101,23 @@ getegid(__unused proc_t p, __unused struct getegid_args *uap, int32_t *retval)
 
 ---
 
+## 用户层 Demo
+
+对比 real / effective 身份与组 ID；在 macOS 上通常 euid==uid，setuid 程序才会分叉。
+
+```c
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void) {
+    printf("euid=%d gid=%d egid=%d\n",
+           geteuid(), getgid(), getegid());
+    return 0;
+}
+```
+
+---
+
 ## 做完打勾
 
 - [ ] 找到 master 里 25 / 47 / 43  
