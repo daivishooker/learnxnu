@@ -129,4 +129,4 @@ kill 投递 → 若被 mask：进 pending
 - [ ] 能说 sigpending 看 uu_siglist  
 - [ ] 填好 `notes/daily/day-17.md`
 
-下一步：Day 18 → `sigaltstack` / `__pthread_kill`
+下一步：Day 18 → [`sigaltstack` / `__pthread_kill`](day-18.md)

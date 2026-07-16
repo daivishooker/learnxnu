@@ -91,7 +91,7 @@
 | Day 15 | 3 | `mmap` / `munmap` / `mprotect` | 197 / 73 / 74 | Mach VM 交汇点 → **正文：[day-15.md](day-15.md)** |
 | Day 16 | 2 | `msync` / `madvise` | 65 / 75 | 同步与建议 → **正文：[day-16.md](day-16.md)** |
 | Day 17 | 3 | `sigaction` / `sigprocmask` / `sigpending` | 46 / 48 / 52 | 信号处理安装与掩码 → **正文：[day-17.md](day-17.md)** |
-| Day 18 | 2 | `sigaltstack` / `__pthread_kill` | 53 / 328 | 信号栈；线程定向信号 |
+| Day 18 | 2 | `sigaltstack` / `__pthread_kill` | 53 / 328 | 信号栈；线程定向信号 → **正文：[day-18.md](day-18.md)** |
 | Day 19 | 3 | `select` / `poll` / `kevent` | 93 / 230 / 363 | 多路复用三代 |
 | Day 20 | 2 | `kevent64` / `kevent_qos` | 369 / 374 | Darwin 事件口演进 |
 | Day 21 | 3 | `ioctl` / `sysctl` / `getrlimit` | 54 / 202 / 194 | 杂项控制面；别深挖每个 cmd |
@@ -163,6 +163,7 @@
 7. 第 3 周内存从 **[Day 15](day-15.md)** 开始：`mmap` / `munmap` / `mprotect`  
 8. 接着 **[Day 16](day-16.md)**：`msync` / `madvise`  
 9. 信号从 **[Day 17](day-17.md)**：`sigaction` / `sigprocmask` / `sigpending`  
-10. 对照填写 `notes/daily/day-0N.md`  
+10. 接着 **[Day 18](day-18.md)**：`sigaltstack` / `__pthread_kill`  
+11. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
