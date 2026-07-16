@@ -117,4 +117,4 @@ bind / connect / accept 之后：
 - [ ] 能说 setsockopt 与 getsockopt 成对  
 - [ ] 填好 `notes/daily/day-29.md`
 
-下一步：Day 30 → `getrusage` / `gettimeofday`（资源统计与时间）
+下一步：Day 30 → [`getrusage` / `gettimeofday`](day-30.md)
