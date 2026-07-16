@@ -113,4 +113,4 @@ mprotect(addr, len, prot) {
 - [ ] 能说 munmap / mprotect 各自调哪个 mach_vm_*  
 - [ ] 填好 `notes/daily/day-15.md`
 
-下一步：Day 16 → `msync` / `mincore`（或计划表替代项）
+下一步：Day 16 → [`msync` / `madvise`](day-16.md)
