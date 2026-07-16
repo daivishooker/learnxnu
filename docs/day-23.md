@@ -147,4 +147,4 @@ socketpair(domain, type, protocol, int sv[2]) {
 - [ ] 能说 socketpair 一次给两个已互连 FD  
 - [ ] 填好 `notes/daily/day-23.md`
 
-下一步：Day 24 → `sendmsg` / `recvmsg` / `getsockopt` 相关
+下一步：Day 24 → [`sendmsg` / `recvmsg` / `getsockopt`](day-24.md)
