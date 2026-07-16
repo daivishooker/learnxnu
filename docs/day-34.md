@@ -101,4 +101,4 @@ sync()    → 尽量让各文件系统脏数据推进去
 - [ ] 能对比全系统 vs 单文件  
 - [ ] 填好 `notes/daily/day-34.md`
 
-下一步：Day 35 → `statfs64` / `fstatfs64`（文件系统统计）
+下一步：Day 35 → [`statfs64` / `fstatfs64`](day-35.md)

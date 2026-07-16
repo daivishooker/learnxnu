@@ -124,7 +124,8 @@
 | Day 32 | 2 | `setrlimit` / `getrlimit`（回顾） | 195 / 194 | 资源上限：改 vs 查 → **正文：[day-32.md](day-32.md)** |
 | Day 33 | 1–2 | `sys_flock` [+ fcntl 锁对照] | 131 / — | 文件劝告锁 → **正文：[day-33.md](day-33.md)** |
 | Day 34 | 2 | `sync` / `fsync`（回顾） | 36 / 95 | 刷盘：全系统 vs 单 FD → **正文：[day-34.md](day-34.md)** |
-| Day 35 | 2 | `statfs64` / `fstatfs64` | 345 / 346 | 文件系统统计 |
+| Day 35 | 2 | `statfs64` / `fstatfs64` | 345 / 346 | 文件系统统计 → **正文：[day-35.md](day-35.md)** |
+| Day 36 | 1–2 | `getfsstat64` | 347 | 列举各挂载点统计 |
 
 ---
 
