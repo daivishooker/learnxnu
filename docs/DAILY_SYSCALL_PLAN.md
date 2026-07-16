@@ -112,6 +112,15 @@
 | Day 27 | 2 | `ptrace` / `sysctl`（回顾安全相关） | 26 / 202 | 调试接口边界 → **正文：[day-27.md](day-27.md)** |
 | Day 28 | 2–3 | 自选：本周卡住的 2–3 个重读 | — | 查漏补缺日 → **正文：[day-28.md](day-28.md)** |
 
+### 第 5 周：套接字补全与时间/资源（续学）
+
+原 28 天表已走完；从 Day 29 起按同样节奏续学。
+
+| 天 | 数量 | 系统调用 | # | 当天重点 |
+|----|------|----------|---|----------|
+| Day 29 | 3 | `getsockname` / `getpeername` / `setsockopt` | 32 / 31 / 105 | 查本端/对端；写选项 → **正文：[day-29.md](day-29.md)** |
+| Day 30 | 2–3 | `getrusage` / `gettimeofday` [+ 时间相关] | 117 / 116 / — | 资源统计与墙钟时间 |
+
 ---
 
 ## 难度提示（别打乱顺序）
@@ -174,6 +183,7 @@
 18. 接着 **[Day 26](day-26.md)**：`shm_open` / `shm_unlink` / `mmap`  
 19. 接着 **[Day 27](day-27.md)**：`ptrace` / `sysctl`  
 20. 第 4 周收尾 **[Day 28](day-28.md)**：查漏补缺  
-21. 对照填写 `notes/daily/day-0N.md`  
+21. 第 5 周从 **[Day 29](day-29.md)**：`getsockname` / `getpeername` / `setsockopt`  
+22. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

@@ -98,4 +98,5 @@ socket → bind → listen（SO_ACCEPTCONN，开排队）
 - [ ] 能对比 shutdown / close  
 - [ ] 填好 `notes/daily/day-28.md`
 
-第 4 周到此收束。完整日程见 [DAILY_SYSCALL_PLAN.md](DAILY_SYSCALL_PLAN.md)。
+第 4 周到此收束。下一步：Day 29 → [`getsockname` / `getpeername` / `setsockopt`](day-29.md)  
+完整日程见 [DAILY_SYSCALL_PLAN.md](DAILY_SYSCALL_PLAN.md)。
