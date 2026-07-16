@@ -110,4 +110,4 @@ getrusage 不直接等于「现在开了几个」；那是另一类统计/计数
 - [ ] 能对比 rlimit vs rusage  
 - [ ] 填好 `notes/daily/day-32.md`
 
-下一步：Day 33 → `sys_flock`（文件劝告锁）
+下一步：Day 33 → [`sys_flock`](day-33.md)
