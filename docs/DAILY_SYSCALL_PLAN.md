@@ -123,7 +123,8 @@
 | Day 31 | 2 | `getpriority` / `setpriority` | 100 / 96 | 调度优先级查询与设置 → **正文：[day-31.md](day-31.md)** |
 | Day 32 | 2 | `setrlimit` / `getrlimit`（回顾） | 195 / 194 | 资源上限：改 vs 查 → **正文：[day-32.md](day-32.md)** |
 | Day 33 | 1–2 | `sys_flock` [+ fcntl 锁对照] | 131 / — | 文件劝告锁 → **正文：[day-33.md](day-33.md)** |
-| Day 34 | 2 | `sync` / `fsync`（回顾） | 36 / 95 | 刷盘：全系统 vs 单 FD |
+| Day 34 | 2 | `sync` / `fsync`（回顾） | 36 / 95 | 刷盘：全系统 vs 单 FD → **正文：[day-34.md](day-34.md)** |
+| Day 35 | 2 | `statfs64` / `fstatfs64` | 345 / 346 | 文件系统统计 |
 
 ---
 
@@ -192,6 +193,7 @@
 23. 接着 **[Day 31](day-31.md)**：`getpriority` / `setpriority`  
 24. 接着 **[Day 32](day-32.md)**：`setrlimit` / `getrlimit`  
 25. 接着 **[Day 33](day-33.md)**：`sys_flock`  
-26. 对照填写 `notes/daily/day-0N.md`  
+26. 接着 **[Day 34](day-34.md)**：`sync` / `fsync`  
+27. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

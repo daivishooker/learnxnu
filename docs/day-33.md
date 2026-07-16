@@ -91,4 +91,4 @@ sys_flock(fd, how) {
 - [ ] 能说劝告锁 ≠ 强制所有 IO 检查  
 - [ ] 填好 `notes/daily/day-33.md`
 
-下一步：Day 34 → `sync` / `fsync`（回顾刷盘；`fsync` Day 14 已见）
+下一步：Day 34 → [`sync` / `fsync`](day-34.md)
