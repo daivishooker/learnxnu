@@ -110,4 +110,4 @@ sysctl(name[], namelen, old, oldlenp, new, newlen) {
 - [ ] 能对比：调试门禁 vs 配置门禁  
 - [ ] 填好 `notes/daily/day-27.md`
 
-下一步：Day 28 → 自选本周卡住的 2–3 个重读（查漏补缺）
+下一步：Day 28 → [查漏补缺](day-28.md)

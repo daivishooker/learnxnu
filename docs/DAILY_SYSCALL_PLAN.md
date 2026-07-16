@@ -110,7 +110,7 @@
 | Day 25 | 2 | `shutdown` / `close`（回顾套接字 FD） | 134 / 6 | 半关闭 vs 释放 → **正文：[day-25.md](day-25.md)** |
 | Day 26 | 3 | `shm_open` / `shm_unlink` / `mmap`（回顾） | 266 / 267 / 197 | POSIX shm → **正文：[day-26.md](day-26.md)** |
 | Day 27 | 2 | `ptrace` / `sysctl`（回顾安全相关） | 26 / 202 | 调试接口边界 → **正文：[day-27.md](day-27.md)** |
-| Day 28 | 2–3 | 自选：本周卡住的 2–3 个重读 | — | 查漏补缺日 |
+| Day 28 | 2–3 | 自选：本周卡住的 2–3 个重读 | — | 查漏补缺日 → **正文：[day-28.md](day-28.md)** |
 
 ---
 
@@ -173,6 +173,7 @@
 17. 接着 **[Day 25](day-25.md)**：`shutdown` / `close`  
 18. 接着 **[Day 26](day-26.md)**：`shm_open` / `shm_unlink` / `mmap`  
 19. 接着 **[Day 27](day-27.md)**：`ptrace` / `sysctl`  
-20. 对照填写 `notes/daily/day-0N.md`  
+20. 第 4 周收尾 **[Day 28](day-28.md)**：查漏补缺  
+21. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
