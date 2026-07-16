@@ -107,7 +107,7 @@
 | Day 22 | 3 | `socket` / `bind` / `listen` | 97 / 104 / 106 | 套接字生命周期前半 → **正文：[day-22.md](day-22.md)** |
 | Day 23 | 3 | `accept` / `connect` / `socketpair` | 30 / 98 / 135 | 连接建立；本地双端 → **正文：[day-23.md](day-23.md)** |
 | Day 24 | 3 | `sendmsg` / `recvmsg` / `getsockopt` 相关 | 28 / 27 / 118 | 消息路径；选项可略读 → **正文：[day-24.md](day-24.md)** |
-| Day 25 | 2 | `shutdown` / `close`（回顾套接字 FD） | — / 6 | 半关闭 vs 释放 |
+| Day 25 | 2 | `shutdown` / `close`（回顾套接字 FD） | 134 / 6 | 半关闭 vs 释放 → **正文：[day-25.md](day-25.md)** |
 | Day 26 | 3 | `shm_open` / `shm_unlink` / `mmap`（回顾） | 266 / 267 / 197 | POSIX shm |
 | Day 27 | 2 | `ptrace` / `sysctl`（回顾安全相关） | 26 / 202 | 调试接口边界 |
 | Day 28 | 2–3 | 自选：本周卡住的 2–3 个重读 | — | 查漏补缺日 |
@@ -170,6 +170,7 @@
 14. 第 4 周网络从 **[Day 22](day-22.md)**：`socket` / `bind` / `listen`  
 15. 接着 **[Day 23](day-23.md)**：`accept` / `connect` / `socketpair`  
 16. 接着 **[Day 24](day-24.md)**：`sendmsg` / `recvmsg` / `getsockopt`  
-17. 对照填写 `notes/daily/day-0N.md`  
+17. 接着 **[Day 25](day-25.md)**：`shutdown` / `close`  
+18. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

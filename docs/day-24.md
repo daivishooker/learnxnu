@@ -140,4 +140,4 @@ getsockopt(s, level, name, val, valsize) {
 - [ ] 能说 getsockopt 按 level/name 读，不深挖每个选项  
 - [ ] 填好 `notes/daily/day-24.md`
 
-下一步：Day 25 → `shutdown` / `close`（回顾套接字 FD）
+下一步：Day 25 → [`shutdown` / `close`](day-25.md)
