@@ -114,4 +114,4 @@ __pthread_kill(thread_port, sig) {
 - [ ] 能说 pthread_kill 对准线程，kill 对准进程  
 - [ ] 填好 `notes/daily/day-18.md`
 
-下一步：Day 19 → `select` / `poll` / `kevent`
+下一步：Day 19 → [`select` / `poll` / `kevent`](day-19.md)
