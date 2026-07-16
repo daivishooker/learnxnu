@@ -109,4 +109,4 @@ gettimeofday  → 问「现在系统认为几点」
 - [ ] 能说 gettimeofday 读墙钟并 copyout  
 - [ ] 填好 `notes/daily/day-30.md`
 
-下一步：Day 31 → `getpriority` / `setpriority`（进程调度优先级相关）
+下一步：Day 31 → [`getpriority` / `setpriority`](day-31.md)

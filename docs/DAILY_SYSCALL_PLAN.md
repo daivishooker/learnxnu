@@ -120,7 +120,8 @@
 |----|------|----------|---|----------|
 | Day 29 | 3 | `getsockname` / `getpeername` / `setsockopt` | 32 / 31 / 105 | 查本端/对端；写选项 → **正文：[day-29.md](day-29.md)** |
 | Day 30 | 2 | `getrusage` / `gettimeofday` | 117 / 116 | 资源统计与墙钟时间 → **正文：[day-30.md](day-30.md)** |
-| Day 31 | 2 | `getpriority` / `setpriority` | 100 / 96 | 调度优先级查询与设置 |
+| Day 31 | 2 | `getpriority` / `setpriority` | 100 / 96 | 调度优先级查询与设置 → **正文：[day-31.md](day-31.md)** |
+| Day 32 | 2 | `setrlimit` / `getrlimit`（回顾） | 195 / 194 | 资源上限：改 vs 查 |
 
 ---
 
@@ -186,6 +187,7 @@
 20. 第 4 周收尾 **[Day 28](day-28.md)**：查漏补缺  
 21. 第 5 周从 **[Day 29](day-29.md)**：`getsockname` / `getpeername` / `setsockopt`  
 22. 接着 **[Day 30](day-30.md)**：`getrusage` / `gettimeofday`  
-23. 对照填写 `notes/daily/day-0N.md`  
+23. 接着 **[Day 31](day-31.md)**：`getpriority` / `setpriority`  
+24. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
