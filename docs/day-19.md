@@ -118,4 +118,4 @@ kevent  持久队列 + 过滤器；现代服务器常用
 - [ ] 知道本树 poll → kqueue  
 - [ ] 填好 `notes/daily/day-19.md`
 
-下一步：Day 20 → `kevent64` / `kevent_qos`
+下一步：Day 20 → [`kevent64` / `kevent_qos`](day-20.md)
