@@ -121,4 +121,4 @@ socket() → bind(本地地址) → listen(backlog)
 - [ ] 能说 listen 进入监听  
 - [ ] 填好 `notes/daily/day-22.md`
 
-下一步：Day 23 → `accept` / `connect` / `socketpair`
+下一步：Day 23 → [`accept` / `connect` / `socketpair`](day-23.md)
