@@ -195,6 +195,7 @@
 24. 接着 **[Day 32](day-32.md)**：`setrlimit` / `getrlimit`  
 25. 接着 **[Day 33](day-33.md)**：`sys_flock`  
 26. 接着 **[Day 34](day-34.md)**：`sync` / `fsync`  
-27. 对照填写 `notes/daily/day-0N.md`  
+27. 接着 **[Day 35](day-35.md)**：`statfs64` / `fstatfs64`  
+28. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

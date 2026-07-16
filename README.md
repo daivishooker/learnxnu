@@ -39,6 +39,7 @@
 - **Day 32：** [docs/day-32.md](docs/day-32.md) · [分析](notes/daily/day-32-analysis.md)（`setrlimit` / `getrlimit`）
 - **Day 33：** [docs/day-33.md](docs/day-33.md) · [分析](notes/daily/day-33-analysis.md)（`sys_flock`）
 - **Day 34：** [docs/day-34.md](docs/day-34.md) · [分析](notes/daily/day-34-analysis.md)（`sync` / `fsync`）
+- **Day 35：** [docs/day-35.md](docs/day-35.md) · [分析](notes/daily/day-35-analysis.md)（`statfs64` / `fstatfs64`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
