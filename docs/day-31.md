@@ -122,4 +122,4 @@ setpriority(PRIO_PROCESS, 0, n) → donice → p_nice → resetpriority
 - [ ] 知道提高优先级常要特权  
 - [ ] 填好 `notes/daily/day-31.md`
 
-下一步：Day 32 → `setrlimit` / `getrlimit`（回顾上限：改 vs 查）
+下一步：Day 32 → [`setrlimit` / `getrlimit`](day-32.md)

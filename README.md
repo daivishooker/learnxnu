@@ -2,7 +2,7 @@
 
 学习 Apple XNU 内核的笔记与源码仓库。
 
-## Day 1–31 在这里
+## Day 1–32 在这里
 
 - **Day 1–7（第 1 周）：** 见下方历史条目 / [日程](docs/DAILY_SYSCALL_PLAN.md)
 - **Day 1：** [docs/day-01.md](docs/day-01.md) · [分析](notes/daily/day-01-analysis.md)
@@ -36,6 +36,7 @@
 - **Day 29：** [docs/day-29.md](docs/day-29.md) · [分析](notes/daily/day-29-analysis.md)（`getsockname` / `getpeername` / `setsockopt`）
 - **Day 30：** [docs/day-30.md](docs/day-30.md) · [分析](notes/daily/day-30-analysis.md)（`getrusage` / `gettimeofday`）
 - **Day 31：** [docs/day-31.md](docs/day-31.md) · [分析](notes/daily/day-31-analysis.md)（`getpriority` / `setpriority`）
+- **Day 32：** [docs/day-32.md](docs/day-32.md) · [分析](notes/daily/day-32-analysis.md)（`setrlimit` / `getrlimit`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
