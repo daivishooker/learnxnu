@@ -130,4 +130,4 @@ mmap(..., fd, ...) {
 - [ ] 能说 mmap 对 PSXSHM 走 pshm_mmap，要 MAP_SHARED  
 - [ ] 填好 `notes/daily/day-26.md`
 
-下一步：Day 27 → `ptrace` / `sysctl`（回顾安全相关）
+下一步：Day 27 → [`ptrace` / `sysctl`](day-27.md)
