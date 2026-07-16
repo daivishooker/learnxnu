@@ -120,4 +120,4 @@ getrlimit(which, rlp) {
 - [ ] 能说 getrlimit：读进程 rlimit  
 - [ ] 填好 `notes/daily/day-21.md`
 
-下一步：Day 22 → `socket` / `bind` / `listen`（第 4 周：网络）
+下一步：Day 22 → [`socket` / `bind` / `listen`](day-22.md)

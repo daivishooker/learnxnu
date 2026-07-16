@@ -104,7 +104,7 @@
 
 | 天 | 数量 | 系统调用 | # | 当天重点 |
 |----|------|----------|---|----------|
-| Day 22 | 3 | `socket` / `bind` / `listen` | 97 / 104 / 106 | 套接字生命周期前半 |
+| Day 22 | 3 | `socket` / `bind` / `listen` | 97 / 104 / 106 | 套接字生命周期前半 → **正文：[day-22.md](day-22.md)** |
 | Day 23 | 3 | `accept` / `connect` / `socketpair` | 30 / 98 / 135 | 连接建立；本地双端 |
 | Day 24 | 3 | `sendmsg` / `recvmsg` / `getsockopt` 相关 | 28 / 27 / — | 消息路径；选项可略读 |
 | Day 25 | 2 | `shutdown` / `close`（回顾套接字 FD） | — / 6 | 半关闭 vs 释放 |
@@ -167,6 +167,7 @@
 11. 多路 IO **[Day 19](day-19.md)**：`select` / `poll` / `kevent`  
 12. 接着 **[Day 20](day-20.md)**：`kevent64` / `kevent_qos`  
 13. 第 3 周收尾 **[Day 21](day-21.md)**：`ioctl` / `sysctl` / `getrlimit`  
-14. 对照填写 `notes/daily/day-0N.md`  
+14. 第 4 周网络从 **[Day 22](day-22.md)**：`socket` / `bind` / `listen`  
+15. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。
