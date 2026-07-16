@@ -94,7 +94,7 @@
 | Day 18 | 2 | `sigaltstack` / `__pthread_kill` | 53 / 328 | 信号栈；线程定向信号 → **正文：[day-18.md](day-18.md)** |
 | Day 19 | 3 | `select` / `poll` / `kevent` | 93 / 230 / 363 | 多路复用三代 → **正文：[day-19.md](day-19.md)** |
 | Day 20 | 2 | `kevent64` / `kevent_qos` | 369 / 374 | Darwin 事件口演进 → **正文：[day-20.md](day-20.md)** |
-| Day 21 | 3 | `ioctl` / `sysctl` / `getrlimit` | 54 / 202 / 194 | 杂项控制面；别深挖每个 cmd |
+| Day 21 | 3 | `ioctl` / `sysctl` / `getrlimit` | 54 / 202 / 194 | 杂项控制面；别深挖每个 cmd → **正文：[day-21.md](day-21.md)** |
 
 **第 3 周验收：** 能说明 `mmap` 如何接到 `osfmk` VM；能对比 `poll` vs `kevent`。
 
@@ -166,6 +166,7 @@
 10. 接着 **[Day 18](day-18.md)**：`sigaltstack` / `__pthread_kill`  
 11. 多路 IO **[Day 19](day-19.md)**：`select` / `poll` / `kevent`  
 12. 接着 **[Day 20](day-20.md)**：`kevent64` / `kevent_qos`  
-13. 对照填写 `notes/daily/day-0N.md`  
+13. 第 3 周收尾 **[Day 21](day-21.md)**：`ioctl` / `sysctl` / `getrlimit`  
+14. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

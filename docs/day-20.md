@@ -131,4 +131,4 @@ kevent64/qos    → 同一模型，结构与系统集成升级
 - [ ] 能说 kevent_qos 接 QoS/workqueue 方向  
 - [ ] 填好 `notes/daily/day-20.md`
 
-下一步：Day 21 → `ioctl` / `sysctl` / `getrlimit`
+下一步：Day 21 → [`ioctl` / `sysctl` / `getrlimit`](day-21.md)
