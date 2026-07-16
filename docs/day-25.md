@@ -129,4 +129,4 @@ socket → bind → listen → accept/connect
 - [ ] 能对比半关闭 vs 释放把手  
 - [ ] 填好 `notes/daily/day-25.md`
 
-下一步：Day 26 → `shm_open` / `shm_unlink` / `mmap`（回顾）
+下一步：Day 26 → [`shm_open` / `shm_unlink` / `mmap`](day-26.md)
