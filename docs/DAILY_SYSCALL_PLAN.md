@@ -88,7 +88,7 @@
 
 | 天 | 数量 | 系统调用 | # | 当天重点 |
 |----|------|----------|---|----------|
-| Day 15 | 3 | `mmap` / `munmap` / `mprotect` | 197 / 73 / 74 | Mach VM 交汇点 |
+| Day 15 | 3 | `mmap` / `munmap` / `mprotect` | 197 / 73 / 74 | Mach VM 交汇点 → **正文：[day-15.md](day-15.md)** |
 | Day 16 | 2 | `msync` / `madvise`（若表中有） | 65 / — | 同步与建议；缺则改读 `mincore` |
 | Day 17 | 3 | `sigaction` / `sigprocmask` / `sigpending` | 46 / 48 / 52 | 信号处理安装与掩码 |
 | Day 18 | 2 | `sigaltstack` / `__pthread_kill` | 53 / 328 | 信号栈；线程定向信号 |
@@ -160,6 +160,7 @@
 4. 接着 **[Day 12](day-12.md)**：`execve` / `exit`（换程序与终结）  
 5. 再进入 **[Day 13](day-13.md)**：`posix_spawn` / `kill`  
 6. 第 2 周收尾 **[Day 14](day-14.md)**：`pipe` / `fcntl` / `fsync`  
-7. 对照填写 `notes/daily/day-0N.md`  
+7. 第 3 周内存从 **[Day 15](day-15.md)** 开始：`mmap` / `munmap` / `mprotect`  
+8. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

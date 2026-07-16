@@ -115,4 +115,4 @@ fsync → fsync_common(..., MNT_WAIT)
 - [ ] 能说 fsync → VNOP_FSYNC  
 - [ ] 填好 `notes/daily/day-14.md`
 
-下一步：Day 15 → `mmap` / `munmap` / `mprotect`（第 3 周：内存）
+下一步：Day 15 → [`mmap` / `munmap` / `mprotect`](day-15.md)
