@@ -125,7 +125,10 @@
 | Day 33 | 1–2 | `sys_flock` [+ fcntl 锁对照] | 131 / — | 文件劝告锁 → **正文：[day-33.md](day-33.md)** |
 | Day 34 | 2 | `sync` / `fsync`（回顾） | 36 / 95 | 刷盘：全系统 vs 单 FD → **正文：[day-34.md](day-34.md)** |
 | Day 35 | 2 | `statfs64` / `fstatfs64` | 345 / 346 | 文件系统统计 → **正文：[day-35.md](day-35.md)** |
-| Day 36 | 1–2 | `getfsstat64` | 347 | 列举各挂载点统计 |
+| Day 36 | 1–2 | `getfsstat64` | 347 | 列举各挂载点统计 → **正文：[day-36.md](day-36.md)** |
+| Day 37 | 2 | `getdirentries64` / `getattrlist` | 344 / 220 | 目录枚举与属性（编号以 master 为准） |
+
+> **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
 ---
 
@@ -196,6 +199,7 @@
 25. 接着 **[Day 33](day-33.md)**：`sys_flock`  
 26. 接着 **[Day 34](day-34.md)**：`sync` / `fsync`  
 27. 接着 **[Day 35](day-35.md)**：`statfs64` / `fstatfs64`  
-28. 对照填写 `notes/daily/day-0N.md`  
+28. 接着 **[Day 36](day-36.md)**：`getfsstat64`  
+29. 对照填写 `notes/daily/day-0N.md`  
 
 完成 Day 7 后再进入第 2 周；不要跳周。

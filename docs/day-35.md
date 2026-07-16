@@ -123,4 +123,4 @@ int main(void) {
 - [ ] 能说 update + get + copyout  
 - [ ] 填好 `notes/daily/day-35.md`
 
-下一步：Day 36 → `getfsstat64`（列出多个文件系统统计）
+下一步：Day 36 → [`getfsstat64`](day-36.md)
