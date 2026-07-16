@@ -116,4 +116,4 @@ madvise(addr, len, behav)
 - [ ] 能说 madvise 是建议，落到 `mach_vm_behavior_set`  
 - [ ] 填好 `notes/daily/day-16.md`
 
-下一步：Day 17 → `sigaction` / `sigprocmask` / `sigpending`
+下一步：Day 17 → [`sigaction` / `sigprocmask` / `sigpending`](day-17.md)
