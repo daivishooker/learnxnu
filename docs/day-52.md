@@ -153,4 +153,4 @@ cc -o day52_demo day52_demo.c && ./day52_demo
 - [ ] 跑通 Demo（至少 bulk）  
 - [ ] 填好 `notes/daily/day-52.md`
 
-下一步：Day 53 → `openat` / `fstatat64`（#463 / #470）
+下一步：Day 53 → [`openat` / `fstatat64`](day-53.md)（#463 / #470）
