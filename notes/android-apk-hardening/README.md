@@ -7,7 +7,8 @@
 | [03-signing-integrity.md](03-signing-integrity.md) | 签名与完整性校验 |
 | [04-runtime-guards.md](04-runtime-guards.md) | 运行时检测策略 |
 | [05-native-and-commercial.md](05-native-and-commercial.md) | Native 与商业壳 |
+| [06-existing-apk-pipeline.md](06-existing-apk-pipeline.md) | **已有 APK 加固流水线（主路径）** |
 | [checklist.md](checklist.md) | 发布检查清单 |
 
 总览文档：[docs/android/APK_HARDENING.md](../../docs/android/APK_HARDENING.md)  
-样例：[samples/apk-hardening/](../../samples/apk-hardening/)
+流水线：[samples/apk-hardening/pipeline/](../../samples/apk-hardening/pipeline/)

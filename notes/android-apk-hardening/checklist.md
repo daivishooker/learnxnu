@@ -1,31 +1,25 @@
 # APK 加固发布检查清单
 
-## 构建
+## 已有 APK 流水线（主）
+
+- [ ] 输入包已是最终业务包（有工程则已开 R8）
+- [ ] 已跑 `pipeline/harden-existing-apk.sh` 或商业壳
+- [ ] `--cert-sha256` 与**最终分发证书**一致
+- [ ] 输出包可安装；冷启动 / 登录 / 关键页冒烟通过
+- [ ] logcat 无意外的 `HardeningShell` / `cert_mismatch`
+- [ ] 工作密钥库不在 git；CI 用密钥保管服务
+
+## 商业壳（如有）
+
+- [ ] 厂商工具版本锁定
+- [ ] 加固后按厂商要求重签（可用 `--resign-only`）
+- [ ] 多进程 / 热修复 / 推送兼容已验证
+
+## 有工程时的构建补充
 
 - [ ] `release` 开启 `minifyEnabled` + `shrinkResources`
-- [ ] `proguard-rules.pro` 已审；第三方 keep 来自官方
-- [ ] `mapping.txt` / `seeds.txt` 已归档（版本号对应）
-- [ ] Release 包用 jadx 抽查：核心业务类已混淆
-
-## 签名与分发
-
-- [ ] 使用独立 upload key；密钥不在仓库
-- [ ] 启用 v2/v3（及需要时的 v4）签名
-- [ ] 若走 Play：已开启 Play App Signing
-- [ ] 渠道包签名与指纹白名单一致
-
-## 运行时
-
-- [ ] Debug 构建不启用硬失败检测
-- [ ] 签名校验期望指纹由 CI 注入
-- [ ] 风险事件可上报服务端
+- [ ] `mapping.txt` 已按版本归档
 - [ ] 敏感 API 有服务端二次鉴权
-
-## Native / 壳（如有）
-
-- [ ] `.so` 已 strip
-- [ ] 加固后在真机矩阵冒烟（冷启动、支付、推送、升级）
-- [ ] 加固工具版本锁定进 CI
 
 ## 合规
 

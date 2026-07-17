@@ -1,0 +1,9 @@
+# 按需下载的大型工具与编译缓存，勿提交
+tools/apktool.jar
+tools/uber-apk-signer.jar
+tools/android-34.jar
+tools/baksmali.jar
+tools/build-tools.zip
+tools/build-tools-unpack/
+tools/compile-out/
+tools/*.partial

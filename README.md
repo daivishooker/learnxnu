@@ -73,11 +73,11 @@
 
 ## Android APK 加固（补充专题）
 
-自有应用发布前的防护基线（R8、签名完整性、运行时信号、Native 辅助）：
+**主路径：对已有 APK 加固**（注入 Application 壳 → 重签），也可接商业壳后再签：
 
 - 总览：[docs/android/APK_HARDENING.md](docs/android/APK_HARDENING.md)
+- 流水线：[samples/apk-hardening/pipeline/](samples/apk-hardening/pipeline/)（`harden-existing-apk.sh`）
 - 笔记：[notes/android-apk-hardening/](notes/android-apk-hardening/)
-- 样例代码：[samples/apk-hardening/](samples/apk-hardening/)
 
 ## XNU 源码（已放入本仓库）
 

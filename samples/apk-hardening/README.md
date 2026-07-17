@@ -1,29 +1,38 @@
-# APK 加固样例代码
+# APK 加固样例
 
-可复制到 Android 工程的**防御侧**片段，不是完整可编译 App。
+## 主路径：已有 APK
 
-## 目录
+对编好的包加固（不改工程）：
+
+→ **[`pipeline/`](pipeline/)** · [`pipeline/README.md`](pipeline/README.md)
+
+```bash
+cd pipeline
+./harden-existing-apk.sh \
+  --apk /path/to/existing.apk \
+  --keystore /path/to/release.jks \
+  --alias your_alias \
+  --storepass '***' \
+  --cert-sha256 '<证书SHA256>' \
+  --out /path/to/hardened.apk
+```
+
+总览文档：[docs/android/APK_HARDENING.md](../../docs/android/APK_HARDENING.md)
+
+## 补充：源码期（有工程时）
 
 ```
 proguard-rules.pro          # R8 规则模板
 app/build.gradle.kts        # minify / 指纹注入示例
-app/src/main/java/.../      # Kotlin 运行时防护
+app/src/main/java/.../      # Kotlin 运行时防护（工程内接入）
 app/src/main/cpp/           # Native 辅助
 ```
 
-## 接入步骤
+有源码时建议：**先 R8 出包 → 再跑 pipeline / 商业壳**。
 
-1. 合并 `proguard-rules.pro` 到你的规则文件
-2. 按 `build.gradle.kts` 开启 minify，并用 CI 注入 `EXPECTED_CERT_SHA256`
-3. 在 `Application.onCreate` 调用 `HardeningBootstrap.init(this)`
-4. 按产品策略处理 `GuardResult`（上报 / 降级 / 阻断）
-
-## 计算证书指纹（本机）
+## 计算证书指纹
 
 ```bash
-# 替换为你的 release 密钥库与别名
 keytool -list -v -keystore release.jks -alias your_alias \
-  | awk '/SHA256:/{print toupper($2)}' | tr -d ':'
+  | awk -F'SHA256: ' '/SHA256:/{print $2}' | tr -d ':' | tr 'a-f' 'A-F'
 ```
-
-将 64 位十六进制（无冒号）写入 `EXPECTED_CERT_SHA256`。
