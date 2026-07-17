@@ -99,4 +99,4 @@ cc -o getfsstat_demo getfsstat_demo.c && ./getfsstat_demo
 - [ ] 跑通上面 Demo  
 - [ ] 填好 `notes/daily/day-36.md`
 
-下一步：Day 37 → `getdirentries64` / `getattrlist`（目录枚举与属性，编号以 master 为准）
+下一步：Day 37 → [`getdirentries64` / `getattrlist`](day-37.md)——目录枚举与批量属性查询。
