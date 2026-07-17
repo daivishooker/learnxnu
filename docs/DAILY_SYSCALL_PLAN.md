@@ -288,6 +288,7 @@
 60. 接着 **[Day 68](day-68.md)**：psynch rwlock（5 个，BSD→Mach）  
 61. 接着 **[Day 69](day-69.md)**：psynch 扫尾 + bsdthread create/terminate（5 个）  
 62. 接着 **[Day 70](day-70.md)**：bsdthread register/ctl + pthread 取消（5 个）  
-63. 对照填写 `notes/daily/day-0N.md`  
+63. 接着 **[Day 71](day-71.md)**：semwait / 策略 / settid·gettid（5 个）  
+64. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 71** → `__semwait_signal` / 策略 / tid。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 72** → `settid_with_pid` / 共享区 / 内存压力 / audit id。
