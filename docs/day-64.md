@@ -168,4 +168,4 @@ cc -o day64_demo day64_demo.c && ./day64_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-64.md`
 
-下一步：Day 65 → `proc_info` / `csops` / `csops_audittoken` / `workq_open` / `workq_kernreturn`
+下一步：Day 65 → [`proc_info` / `csops` / `workq`](day-65.md)
