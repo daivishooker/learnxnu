@@ -161,4 +161,4 @@ cc -o day62_demo day62_demo.c && ./day62_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-62.md`
 
-下一步：Day 63 → `umask` / `mlock` / `munlock` / `mlockall` / `munlockall`
+下一步：Day 63 → [`umask` / `mlock` 族](day-63.md)

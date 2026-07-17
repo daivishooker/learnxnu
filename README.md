@@ -67,6 +67,7 @@
 - **Day 60：** [docs/day-60.md](docs/day-60.md) · [分析](notes/daily/day-60-analysis.md)（`setuid` / `seteuid` / `setreuid` 与 gid 对称三项）
 - **Day 61：** [docs/day-61.md](docs/day-61.md) · [分析](notes/daily/day-61-analysis.md)（`getgroups` / `setgroups` / `initgroups` / `getlogin` / `setlogin` / `chroot`）
 - **Day 62：** [docs/day-62.md](docs/day-62.md) · [分析](notes/daily/day-62-analysis.md)（`getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid`）
+- **Day 63：** [docs/day-63.md](docs/day-63.md) · [分析](notes/daily/day-63-analysis.md)（`umask` / `mlock` / `munlock` / `mlockall` / `munlockall`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
