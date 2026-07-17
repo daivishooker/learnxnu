@@ -81,7 +81,7 @@
 - **Mach trap 地图（须单独记账）：** [docs/MACH_TRAPS.md](docs/MACH_TRAPS.md)
 - **系统调用安全白皮书（全部 BSD + Mach，SEC 标记 + Demo）：** [docs/SYSCALL_SECURITY_WHITEPAPER.md](docs/SYSCALL_SECURITY_WHITEPAPER.md) · [demos/whitepaper/](demos/whitepaper/)
 - **LeoCounter 学习看板（独立线）：** [docs/leocounter/](docs/leocounter/) · 源码 [`projects/leocounter/`](projects/leocounter/)
-- **LiveContainer 学习看板（独立线）：** [docs/livecontainer/](docs/livecontainer/) · 源码 [`projects/LiveContainer/`](projects/LiveContainer/)
+- **LiveContainer 学习看板（独立线）：** [docs/livecontainer/](docs/livecontainer/)（[机制](docs/livecontainer/MECHANISM.md) · [启动跟读](docs/livecontainer/STARTUP_TRACE.md)）· 源码 [`projects/LiveContainer/`](projects/LiveContainer/)
 
 ## XNU 源码（已放入本仓库）
 
