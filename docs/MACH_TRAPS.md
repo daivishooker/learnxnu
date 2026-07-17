@@ -1,6 +1,7 @@
 # Mach Trap 地图（需单独记账）
 
-源码：`xnu/osfmk/kern/syscall_sw.c` → **`mach_trap_table`**（共 **128** 槽；大量 `kern_invalid`）。
+源码：`xnu/osfmk/kern/syscall_sw.c` → **`mach_trap_table`**（共 **128** 槽；大量 `kern_invalid`）。  
+完整安全白皮书（BSD+Mach+Demo）：[SYSCALL_SECURITY_WHITEPAPER.md](SYSCALL_SECURITY_WHITEPAPER.md)
 
 ## 为什么之前没进「剩余 syscall」表？
 
