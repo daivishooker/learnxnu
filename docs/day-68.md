@@ -139,17 +139,18 @@ static void *writer(void *arg) {
 int main(void) {
     pthread_t r1, r2, w;
 
+    /* 先写再读，避免演示里和写者竞态 */
     if (pthread_create(&w, NULL, writer, NULL) != 0) {
         perror("pthread_create writer");
         return 1;
     }
+    pthread_join(w, NULL);
+
     if (pthread_create(&r1, NULL, reader, NULL) != 0 ||
         pthread_create(&r2, NULL, reader, NULL) != 0) {
         perror("pthread_create reader");
         return 1;
     }
-
-    pthread_join(w, NULL);
     pthread_join(r1, NULL);
     pthread_join(r2, NULL);
 
