@@ -3,7 +3,7 @@
 基于 `xnu/` = **xnu-12377.121.6** 的 `syscalls.master`。  
 统计口径：有效入口（去掉 `nosys`/`enosys`）约 **455**；已覆盖约 **245**（含计划中的 Day 72）；**本文约 210 个未学**。
 
-> 不含 Mach trap 表（那是另一套入口）。  
+> **Mach trap 已单独入账：** [MACH_TRAPS.md](MACH_TRAPS.md)（`mach_trap_table`，与本表编号空间不同）。  
 > `*_nocancel` 与可取消版语义几乎相同，单独成组，学习时可扫尾。
 
 ---
@@ -310,7 +310,7 @@ Day 72 计划：`getauid` / `setauid`。
 6. **网络策略周**：`necp_*`（Skywalk 可后置）  
 7. **其余**：IPC/AIO/nocancel/遥测 按兴趣扫尾  
 
-Mach trap（`mach_vm_*`、`task_*` trap 等）不在本表；安全向也应另开一张 trap 地图。
+Mach trap 见 **[MACH_TRAPS.md](MACH_TRAPS.md)**（勿与本表编号混用）。
 
 ---
 
