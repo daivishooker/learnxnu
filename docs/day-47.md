@@ -129,4 +129,4 @@ cc -o day47_demo day47_demo.c && ./day47_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-47.md`
 
-下一步：Day 48 → `readlink` / `readlinkat`（#58 / #473）
+下一步：Day 48 → [`readlink` / `readlinkat`](day-48.md)（#58 / #473）
