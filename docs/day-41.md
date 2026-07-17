@@ -172,4 +172,4 @@ cc -o day41_demo day41_demo.c && ./day41_demo
 - [ ] 跑通 Demo（至少 fsgetpath）  
 - [ ] 填好 `notes/daily/day-41.md`
 
-下一步：Day 42 → `getxattr` / `setxattr`（扩展属性）
+下一步：Day 42 → [`getxattr` / `setxattr`](day-42.md)——扩展属性读写。
