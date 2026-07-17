@@ -79,6 +79,7 @@
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 - **剩余 BSD syscall 地图（分组 + 安全优先）：** [docs/REMAINING_SYSCALLS.md](docs/REMAINING_SYSCALLS.md)
 - **Mach trap 地图（须单独记账）：** [docs/MACH_TRAPS.md](docs/MACH_TRAPS.md)
+- **系统调用安全白皮书（全部 BSD + Mach，SEC 标记 + Demo）：** [docs/SYSCALL_SECURITY_WHITEPAPER.md](docs/SYSCALL_SECURITY_WHITEPAPER.md) · [demos/whitepaper/](demos/whitepaper/)
 
 ## XNU 源码（已放入本仓库）
 

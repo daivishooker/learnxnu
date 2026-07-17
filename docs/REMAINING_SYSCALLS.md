@@ -4,6 +4,7 @@
 统计口径：有效入口（去掉 `nosys`/`enosys`）约 **455**；已覆盖约 **245**（含计划中的 Day 72）；**本文约 210 个未学**。
 
 > **Mach trap 已单独入账：** [MACH_TRAPS.md](MACH_TRAPS.md)（`mach_trap_table`，与本表编号空间不同）。  
+**完整白皮书（已学+未学、SEC 标记、Demo）：** [SYSCALL_SECURITY_WHITEPAPER.md](SYSCALL_SECURITY_WHITEPAPER.md)。  
 > `*_nocancel` 与可取消版语义几乎相同，单独成组，学习时可扫尾。
 
 ---

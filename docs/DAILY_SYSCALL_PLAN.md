@@ -3,7 +3,8 @@
 基于仓库内源码：`xnu/`（**xnu-12377.121.6**）。
 
 **剩余未学地图（含分组 + 安全优先）：** [REMAINING_SYSCALLS.md](REMAINING_SYSCALLS.md)  
-**Mach trap 地图（须单独学/记账）：** [MACH_TRAPS.md](MACH_TRAPS.md)
+**Mach trap 地图（须单独学/记账）：** [MACH_TRAPS.md](MACH_TRAPS.md)  
+**安全白皮书（全部 BSD + Mach + SEC 标记 + Demo）：** [SYSCALL_SECURITY_WHITEPAPER.md](SYSCALL_SECURITY_WHITEPAPER.md) · [demos/whitepaper/](../demos/whitepaper/)
 
 节奏：
 
