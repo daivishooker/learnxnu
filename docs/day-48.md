@@ -130,4 +130,4 @@ cc -o day48_demo day48_demo.c && ./day48_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-48.md`
 
-下一步：Day 49 → `symlink` / `symlinkat`（#57 / #474）
+下一步：Day 49 → [`symlink` / `symlinkat`](day-49.md)（#57 / #474）
