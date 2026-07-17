@@ -143,7 +143,8 @@
 | Day 51 | 2 | `chflags` / `fchflags` | 34 / 35 | 文件标志（含 append-only 等） → **正文：[day-51.md](day-51.md)** |
 | Day 52 | 2 | `getattrlistbulk` / `fsctl` | 461 / 242 | 目录批量属性与文件系统控制 → **正文：[day-52.md](day-52.md)** |
 | Day 53 | 2 | `openat` / `fstatat64` | 463 / 470 | 相对目录 FD 打开与取元数据 → **正文：[day-53.md](day-53.md)** |
-| Day 54 | 2 | `renameat` / `unlinkat` | 465 / 472 | 相对目录 FD 重命名与删除 |
+| Day 54 | 2 | `renameat` / `unlinkat` | 465 / 472 | 相对目录 FD 重命名与删除 → **正文：[day-54.md](day-54.md)** |
+| Day 55 | 2 | `mkdirat` / `faccessat` | 475 / 466 | 相对目录 FD 建目录与权限探测 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -234,6 +235,7 @@
 43. 接着 **[Day 51](day-51.md)**：`chflags` / `fchflags`  
 44. 接着 **[Day 52](day-52.md)**：`getattrlistbulk` / `fsctl`  
 45. 接着 **[Day 53](day-53.md)**：`openat` / `fstatat64`  
-46. 对照填写 `notes/daily/day-0N.md`  
+46. 接着 **[Day 54](day-54.md)**：`renameat` / `unlinkat`  
+47. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 54** → `renameat` / `unlinkat`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 55** → `mkdirat` / `faccessat`。

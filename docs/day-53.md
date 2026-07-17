@@ -139,4 +139,4 @@ cc -o day53_demo day53_demo.c && ./day53_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-53.md`
 
-下一步：Day 54 → `renameat` / `unlinkat`（#465 / #472）
+下一步：Day 54 → [`renameat` / `unlinkat`](day-54.md)（#465 / #472）
