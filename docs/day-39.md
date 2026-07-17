@@ -160,4 +160,4 @@ cc -o day39_demo day39_demo.c && ./day39_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-39.md`
 
-下一步：Day 40 → `clonefileat` / `fclonefileat`（#462 / #517）
+下一步：Day 40 → [`clonefileat` / `fclonefileat`](day-40.md)（#462 / #517）
