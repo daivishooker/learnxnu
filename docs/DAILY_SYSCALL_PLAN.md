@@ -145,7 +145,8 @@
 | Day 53 | 2 | `openat` / `fstatat64` | 463 / 470 | 相对目录 FD 打开与取元数据 → **正文：[day-53.md](day-53.md)** |
 | Day 54 | 2 | `renameat` / `unlinkat` | 465 / 472 | 相对目录 FD 重命名与删除 → **正文：[day-54.md](day-54.md)** |
 | Day 55 | 2 | `mkdirat` / `faccessat` | 475 / 466 | 相对目录 FD 建目录与权限探测 → **正文：[day-55.md](day-55.md)** |
-| Day 56 | 2 | `fchmodat` / `fchownat` | 467 / 468 | 相对目录 FD 改权限与属主 |
+| Day 56 | 2 | `fchmodat` / `fchownat` | 467 / 468 | 相对目录 FD 改权限与属主 → **正文：[day-56.md](day-56.md)** |
+| Day 57 | 2 | `linkat` / `getattrlistat` | 471 / 476 | 相对目录 FD 硬链接与按路径取属性 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -238,6 +239,7 @@
 45. 接着 **[Day 53](day-53.md)**：`openat` / `fstatat64`  
 46. 接着 **[Day 54](day-54.md)**：`renameat` / `unlinkat`  
 47. 接着 **[Day 55](day-55.md)**：`mkdirat` / `faccessat`  
-48. 对照填写 `notes/daily/day-0N.md`  
+48. 接着 **[Day 56](day-56.md)**：`fchmodat` / `fchownat`  
+49. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 56** → `fchmodat` / `fchownat`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 57** → `linkat` / `getattrlistat`。

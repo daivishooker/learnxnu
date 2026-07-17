@@ -170,4 +170,4 @@ cc -o day55_demo day55_demo.c && ./day55_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-55.md`
 
-下一步：Day 56 → `fchmodat` / `fchownat`（#467 / #468）
+下一步：Day 56 → [`fchmodat` / `fchownat`](day-56.md)（#467 / #468）

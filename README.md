@@ -60,6 +60,7 @@
 - **Day 53：** [docs/day-53.md](docs/day-53.md) · [分析](notes/daily/day-53-analysis.md)（`openat` / `fstatat64`）
 - **Day 54：** [docs/day-54.md](docs/day-54.md) · [分析](notes/daily/day-54-analysis.md)（`renameat` / `unlinkat`）
 - **Day 55：** [docs/day-55.md](docs/day-55.md) · [分析](notes/daily/day-55-analysis.md)（`mkdirat` / `faccessat`）
+- **Day 56：** [docs/day-56.md](docs/day-56.md) · [分析](notes/daily/day-56-analysis.md)（`fchmodat` / `fchownat`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
