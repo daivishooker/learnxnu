@@ -164,4 +164,4 @@ cc -o day38_demo day38_demo.c && ./day38_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-38.md`
 
-下一步：Day 39 → `exchangedata` / `copyfile`（#223 / #227）
+下一步：Day 39 → [`exchangedata` / `copyfile`](day-39.md)（#223 / #227）
