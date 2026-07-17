@@ -154,4 +154,4 @@ cc -o day50_demo day50_demo.c && ./day50_demo
 - [ ] 跑通 Demo（至少 mkfifo）  
 - [ ] 填好 `notes/daily/day-50.md`
 
-下一步：Day 51 → `chflags` / `fchflags`（#34 / #35；含 append-only 等标志）
+下一步：Day 51 → [`chflags` / `fchflags`](day-51.md)（#34 / #35；含 append-only 等标志）

@@ -140,7 +140,8 @@
 | Day 48 | 2 | `readlink` / `readlinkat` | 58 / 473 | 读符号链接目标（路径 / 相对目录 FD） → **正文：[day-48.md](day-48.md)** |
 | Day 49 | 2 | `symlink` / `symlinkat` | 57 / 474 | 创建符号链接（路径 / 相对目录 FD） → **正文：[day-49.md](day-49.md)** |
 | Day 50 | 2 | `mknod` / `mkfifo` | 14 / 132 | 创建设备节点与命名管道 → **正文：[day-50.md](day-50.md)** |
-| Day 51 | 2 | `chflags` / `fchflags` | 34 / 35 | 文件标志（含 append-only 等） |
+| Day 51 | 2 | `chflags` / `fchflags` | 34 / 35 | 文件标志（含 append-only 等） → **正文：[day-51.md](day-51.md)** |
+| Day 52 | 2 | `getattrlistbulk` / `fsctl` | 461 / 242 | 目录批量属性与文件系统控制 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -228,6 +229,7 @@
 40. 接着 **[Day 48](day-48.md)**：`readlink` / `readlinkat`  
 41. 接着 **[Day 49](day-49.md)**：`symlink` / `symlinkat`  
 42. 接着 **[Day 50](day-50.md)**：`mknod` / `mkfifo`  
-43. 对照填写 `notes/daily/day-0N.md`  
+43. 接着 **[Day 51](day-51.md)**：`chflags` / `fchflags`  
+44. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 51** → `chflags` / `fchflags`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 52** → `getattrlistbulk` / `fsctl`。
