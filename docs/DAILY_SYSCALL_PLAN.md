@@ -136,7 +136,8 @@
 | Day 44 | 2 | `chmod` / `chown` | 15 / 16 | 权限位与属主/属组 → **正文：[day-44.md](day-44.md)** |
 | Day 45 | 2 | `utimes` / `futimes` | 138 / 139 | 改访问/修改时间（路径 vs FD） → **正文：[day-45.md](day-45.md)** |
 | Day 46 | 2 | `truncate` / `ftruncate` | 200 / 201 | 按路径/FD 截断文件长度 → **正文：[day-46.md](day-46.md)** |
-| Day 47 | 2 | `pathconf` / `fpathconf` | 191 / 192 | 查询路径/FD 的配置上限 |
+| Day 47 | 2 | `pathconf` / `fpathconf` | 191 / 192 | 查询路径/FD 的配置上限 → **正文：[day-47.md](day-47.md)** |
+| Day 48 | 2 | `readlink` / `readlinkat` | 58 / 473 | 读符号链接目标（路径 / 相对目录 FD） |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -220,6 +221,7 @@
 36. 接着 **[Day 44](day-44.md)**：`chmod` / `chown`  
 37. 接着 **[Day 45](day-45.md)**：`utimes` / `futimes`  
 38. 接着 **[Day 46](day-46.md)**：`truncate` / `ftruncate`  
-39. 对照填写 `notes/daily/day-0N.md`  
+39. 接着 **[Day 47](day-47.md)**：`pathconf` / `fpathconf`  
+40. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 47** → `pathconf` / `fpathconf`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 48** → `readlink` / `readlinkat`。

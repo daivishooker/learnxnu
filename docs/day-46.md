@@ -146,4 +146,4 @@ cc -o day46_demo day46_demo.c && ./day46_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-46.md`
 
-下一步：Day 47 → `pathconf` / `fpathconf`（#191 / #192）
+下一步：Day 47 → [`pathconf` / `fpathconf`](day-47.md)（#191 / #192）
