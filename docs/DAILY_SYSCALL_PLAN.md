@@ -164,7 +164,8 @@
 | Day 67 | 5 | `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad` | 301 / 302 / 305 / 304 / 303 | pthread 同步（BSD→Mach）→ **正文：[day-67.md](day-67.md)** |
 | Day 68 | 5 | `psynch_rw_rdlock` / `psynch_rw_wrlock` / `psynch_rw_unlock` / `psynch_rw_upgrade` / `psynch_rw_downgrade` | 306 / 307 / 308 / 300 / 299 | pthread rwlock（BSD→Mach；后两者 stub）→ **正文：[day-68.md](day-68.md)** |
 | Day 69 | 5 | `psynch_rw_longrdlock` / `psynch_rw_yieldwrlock` / `psynch_cvclrprepost` / `bsdthread_create` / `bsdthread_terminate` | 297 / 298 / 312 / 360 / 361 | psynch 扫尾 + 线程创建（BSD→Mach）→ **正文：[day-69.md](day-69.md)** |
-| Day 70 | 5 | `bsdthread_register` / `bsdthread_ctl` / `__disable_threadsignal` / `__pthread_markcancel` / `__pthread_canceled` | 366 / 478 / 331 / 332 / 333 | 线程注册/控制与取消（BSD→Mach） |
+| Day 70 | 5 | `bsdthread_register` / `bsdthread_ctl` / `__disable_threadsignal` / `__pthread_markcancel` / `__pthread_canceled` | 366 / 478 / 331 / 332 / 333 | 线程注册/控制与取消 → **正文：[day-70.md](day-70.md)** |
+| Day 71 | 5 | `__semwait_signal` / `iopolicysys` / `process_policy` / `sys_settid` / `gettid` | 334 / 322 / 323 / 285 / 286 | 同步等待杂项、I/O/进程策略与 tid |
 
 ### Day 66 起标注约定
 

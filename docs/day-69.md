@@ -168,4 +168,4 @@ cc -o day69_demo day69_demo.c -lpthread && ./day69_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-69.md`
 
-下一步：Day 70 → `bsdthread_register` / `bsdthread_ctl` + pthread 取消相关（`__disable_threadsignal` / `__pthread_markcancel` / `__pthread_canceled`）
+下一步：**[Day 70](day-70.md)** → `bsdthread_register` / `bsdthread_ctl` + pthread 取消相关
