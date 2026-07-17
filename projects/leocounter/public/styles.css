@@ -1,0 +1,15 @@
+.bangers-regular {
+    font-family: "Bangers", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "Bangers";
+    text-align: center;
+    padding: 30px;
+}
+
+body {
+    font-family: sans-serif;
+}
