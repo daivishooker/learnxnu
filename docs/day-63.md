@@ -172,4 +172,4 @@ cc -o day63_demo day63_demo.c && ./day63_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-63.md`
 
-下一步：Day 64 → `revoke` / `acct` / `gethostuuid` / `minherit` / `swapon`
+下一步：Day 64 → [杂项五件套](day-64.md)（`revoke` / `acct` / `gethostuuid` / `minherit` / `swapon`）

@@ -68,6 +68,7 @@
 - **Day 61：** [docs/day-61.md](docs/day-61.md) · [分析](notes/daily/day-61-analysis.md)（`getgroups` / `setgroups` / `initgroups` / `getlogin` / `setlogin` / `chroot`）
 - **Day 62：** [docs/day-62.md](docs/day-62.md) · [分析](notes/daily/day-62-analysis.md)（`getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid`）
 - **Day 63：** [docs/day-63.md](docs/day-63.md) · [分析](notes/daily/day-63-analysis.md)（`umask` / `mlock` / `munlock` / `mlockall` / `munlockall`）
+- **Day 64：** [docs/day-64.md](docs/day-64.md) · [分析](notes/daily/day-64-analysis.md)（`revoke` / `acct` / `gethostuuid` / `minherit` / `swapon`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
