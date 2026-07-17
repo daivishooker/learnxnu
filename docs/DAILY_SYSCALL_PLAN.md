@@ -163,7 +163,8 @@
 | Day 66 | 6 | `thread_selfid` / `thread_selfusage` / `ledger` / `csrctl` / `ulock_wait` / `ulock_wake` | 372 / 482 / 373 / 483 / 515 / 516 | 线程/ledger/CSR/ulock（标 BSD/Mach）→ **正文：[day-66.md](day-66.md)** |
 | Day 67 | 5 | `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad` | 301 / 302 / 305 / 304 / 303 | pthread 同步（BSD→Mach）→ **正文：[day-67.md](day-67.md)** |
 | Day 68 | 5 | `psynch_rw_rdlock` / `psynch_rw_wrlock` / `psynch_rw_unlock` / `psynch_rw_upgrade` / `psynch_rw_downgrade` | 306 / 307 / 308 / 300 / 299 | pthread rwlock（BSD→Mach；后两者 stub）→ **正文：[day-68.md](day-68.md)** |
-| Day 69 | 5 | `psynch_rw_longrdlock` / `psynch_rw_yieldwrlock` / `psynch_cvclrprepost` / `bsdthread_create` / `bsdthread_terminate` | 297 / 298 / 312 / 360 / 361 | psynch 扫尾 + 线程创建（BSD→Mach） |
+| Day 69 | 5 | `psynch_rw_longrdlock` / `psynch_rw_yieldwrlock` / `psynch_cvclrprepost` / `bsdthread_create` / `bsdthread_terminate` | 297 / 298 / 312 / 360 / 361 | psynch 扫尾 + 线程创建（BSD→Mach）→ **正文：[day-69.md](day-69.md)** |
+| Day 70 | 5 | `bsdthread_register` / `bsdthread_ctl` / `__disable_threadsignal` / `__pthread_markcancel` / `__pthread_canceled` | 366 / 478 / 331 / 332 / 333 | 线程注册/控制与取消（BSD→Mach） |
 
 ### Day 66 起标注约定
 

@@ -73,6 +73,7 @@
 - **Day 66：** [docs/day-66.md](docs/day-66.md) · [分析](notes/daily/day-66-analysis.md)（`thread_selfid` / `ledger` / `csrctl` / `ulock_*`；标 BSD/Mach）
 - **Day 67：** [docs/day-67.md](docs/day-67.md) · [分析](notes/daily/day-67-analysis.md)（`psynch_*` mutex/cond；BSD→Mach）
 - **Day 68：** [docs/day-68.md](docs/day-68.md) · [分析](notes/daily/day-68-analysis.md)（`psynch_rw_*`；BSD→Mach，upgrade/downgrade stub）
+- **Day 69：** [docs/day-69.md](docs/day-69.md) · [分析](notes/daily/day-69-analysis.md)（psynch 扫尾 + `bsdthread_create` / `terminate`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）

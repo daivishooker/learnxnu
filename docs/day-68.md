@@ -175,4 +175,4 @@ cc -o day68_demo day68_demo.c -lpthread && ./day68_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-68.md`
 
-下一步：Day 69 → `psynch_rw_longrdlock` / `yieldwrlock` / `cvclrprepost` + `bsdthread_create` / `bsdthread_terminate`（psynch 扫尾与线程创建）
+下一步：**[Day 69](day-69.md)** → `psynch_rw_longrdlock` / `yieldwrlock` / `cvclrprepost` + `bsdthread_create` / `bsdthread_terminate`
