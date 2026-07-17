@@ -2,6 +2,8 @@
 
 基于仓库内源码：`xnu/`（**xnu-12377.121.6**）。
 
+**剩余未学地图（含分组 + 安全优先）：** [REMAINING_SYSCALLS.md](REMAINING_SYSCALLS.md)
+
 节奏：
 
 - **Day 1–56：** 每天 2–3 个（打基础）  

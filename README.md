@@ -77,6 +77,7 @@
 - **Day 70：** [docs/day-70.md](docs/day-70.md) · [分析](notes/daily/day-70-analysis.md)（`bsdthread_register` / `ctl` + pthread 取消）
 - **Day 71：** [docs/day-71.md](docs/day-71.md) · [分析](notes/daily/day-71-analysis.md)（`__semwait_signal` / 策略 / settid·gettid）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
+- **剩余 syscall 地图（分组 + 安全优先）：** [docs/REMAINING_SYSCALLS.md](docs/REMAINING_SYSCALLS.md)
 
 ## XNU 源码（已放入本仓库）
 
