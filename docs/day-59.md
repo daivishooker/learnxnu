@@ -202,4 +202,4 @@ cc -o day59_demo day59_demo.c && ./day59_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-59.md`
 
-下一步：Day 60 → 凭证变更扫尾（`setuid` / `setgid` / `seteuid` / `setegid` / `setreuid` / `setregid`）
+下一步：Day 60 → [凭证变更扫尾](day-60.md)（`setuid` / `setgid` / `seteuid` / `setegid` / `setreuid` / `setregid`）
