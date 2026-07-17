@@ -149,4 +149,4 @@ cc -o day67_demo day67_demo.c -lpthread && ./day67_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-67.md`
 
-下一步：Day 68 → `psynch_rw_*` 读写锁族（BSD→Mach）
+下一步：**[Day 68](day-68.md)** → `psynch_rw_*` 读写锁族（BSD→Mach）
