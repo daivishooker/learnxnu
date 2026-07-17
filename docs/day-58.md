@@ -185,4 +185,4 @@ cc -o day58_demo day58_demo.c && ./day58_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-58.md`
 
-下一步：Day 59 → `sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries` / `access_extended`
+下一步：Day 59 → [杂项六件套](day-59.md)（`sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries` / `access_extended`）
