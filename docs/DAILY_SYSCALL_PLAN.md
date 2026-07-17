@@ -165,7 +165,8 @@
 | Day 68 | 5 | `psynch_rw_rdlock` / `psynch_rw_wrlock` / `psynch_rw_unlock` / `psynch_rw_upgrade` / `psynch_rw_downgrade` | 306 / 307 / 308 / 300 / 299 | pthread rwlock（BSD→Mach；后两者 stub）→ **正文：[day-68.md](day-68.md)** |
 | Day 69 | 5 | `psynch_rw_longrdlock` / `psynch_rw_yieldwrlock` / `psynch_cvclrprepost` / `bsdthread_create` / `bsdthread_terminate` | 297 / 298 / 312 / 360 / 361 | psynch 扫尾 + 线程创建（BSD→Mach）→ **正文：[day-69.md](day-69.md)** |
 | Day 70 | 5 | `bsdthread_register` / `bsdthread_ctl` / `__disable_threadsignal` / `__pthread_markcancel` / `__pthread_canceled` | 366 / 478 / 331 / 332 / 333 | 线程注册/控制与取消 → **正文：[day-70.md](day-70.md)** |
-| Day 71 | 5 | `__semwait_signal` / `iopolicysys` / `process_policy` / `sys_settid` / `gettid` | 334 / 322 / 323 / 285 / 286 | 同步等待杂项、I/O/进程策略与 tid |
+| Day 71 | 5 | `__semwait_signal` / `iopolicysys` / `process_policy` / `sys_settid` / `gettid` | 334 / 322 / 323 / 285 / 286 | semwait/策略/线程凭证覆盖 → **正文：[day-71.md](day-71.md)** |
+| Day 72 | 5 | `sys_settid_with_pid` / `shared_region_check_np` / `vm_pressure_monitor` / `getauid` / `setauid` | 311 / 294 / 296 / 353 / 354 | settid 扩展、共享区、内存压力与 audit id |
 
 ### Day 66 起标注约定
 

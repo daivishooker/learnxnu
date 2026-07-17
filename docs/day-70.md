@@ -179,4 +179,4 @@ cc -o day70_demo day70_demo.c -lpthread && ./day70_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-70.md`
 
-下一步：Day 71 → `__semwait_signal` / `iopolicysys` / `process_policy` / `sys_settid` / `gettid`
+下一步：**[Day 71](day-71.md)** → `__semwait_signal` / `iopolicysys` / `process_policy` / `sys_settid` / `gettid`

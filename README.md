@@ -75,6 +75,7 @@
 - **Day 68：** [docs/day-68.md](docs/day-68.md) · [分析](notes/daily/day-68-analysis.md)（`psynch_rw_*`；BSD→Mach，upgrade/downgrade stub）
 - **Day 69：** [docs/day-69.md](docs/day-69.md) · [分析](notes/daily/day-69-analysis.md)（psynch 扫尾 + `bsdthread_create` / `terminate`）
 - **Day 70：** [docs/day-70.md](docs/day-70.md) · [分析](notes/daily/day-70-analysis.md)（`bsdthread_register` / `ctl` + pthread 取消）
+- **Day 71：** [docs/day-71.md](docs/day-71.md) · [分析](notes/daily/day-71-analysis.md)（`__semwait_signal` / 策略 / settid·gettid）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
