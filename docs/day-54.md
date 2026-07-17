@@ -150,4 +150,4 @@ cc -o day54_demo day54_demo.c && ./day54_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-54.md`
 
-下一步：Day 55 → `mkdirat` / `faccessat`（#475 / #466）
+下一步：Day 55 → [`mkdirat` / `faccessat`](day-55.md)（#475 / #466）
