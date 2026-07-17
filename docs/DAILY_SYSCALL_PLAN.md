@@ -161,7 +161,8 @@
 | Day 64 | 5 | `revoke` / `acct` / `gethostuuid` / `minherit` / `swapon` | 56 / 51 / 142 / 250 / 85 | 杂项：吊销、记账、UUID、继承、交换 → **正文：[day-64.md](day-64.md)** |
 | Day 65 | 5 | `proc_info` / `csops` / `csops_audittoken` / `workq_open` / `workq_kernreturn` | 336 / 169 / 170 / 367 / 368 | 进程信息、代码签名与 workqueue → **正文：[day-65.md](day-65.md)** |
 | Day 66 | 6 | `thread_selfid` / `thread_selfusage` / `ledger` / `csrctl` / `ulock_wait` / `ulock_wake` | 372 / 482 / 373 / 483 / 515 / 516 | 线程/ledger/CSR/ulock（标 BSD/Mach）→ **正文：[day-66.md](day-66.md)** |
-| Day 67 | 5 | `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad` | 301 / 302 / 305 / 304 / 303 | pthread 同步（BSD→Mach） |
+| Day 67 | 5 | `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad` | 301 / 302 / 305 / 304 / 303 | pthread 同步（BSD→Mach）→ **正文：[day-67.md](day-67.md)** |
+| Day 68 | 5 | `psynch_rw_rdlock` / `psynch_rw_wrlock` / `psynch_rw_unlock` / `psynch_rw_upgrade` / `psynch_rw_downgrade` | 306 / 307 / 308 / 300 / 299 | pthreadrwlock（BSD→Mach） |
 
 ### Day 66 起标注约定
 
@@ -279,6 +280,7 @@
 56. 接着 **[Day 64](day-64.md)**：revoke / acct / UUID / minherit / swapon（5 个）  
 57. 接着 **[Day 65](day-65.md)**：proc_info / csops / workq（5 个）  
 58. 接着 **[Day 66](day-66.md)**：thread/ledger/csrctl/ulock（6 个，标 BSD/Mach）  
-59. 对照填写 `notes/daily/day-0N.md`  
+59. 接着 **[Day 67](day-67.md)**：psynch mutex/cond（5 个，BSD→Mach）  
+60. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 67** → `psynch_*`（pthread 同步）。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 68** → `psynch_rw_*`。

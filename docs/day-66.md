@@ -162,4 +162,4 @@ cc -o day66_demo day66_demo.c && ./day66_demo
 - [ ] 能说 ledger 是 task 账本  
 - [ ] 填好 `notes/daily/day-66.md`
 
-下一步：Day 67 → `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad`（BSD→Mach，pthread 同步）
+下一步：Day 67 → [`psynch_*` mutex/cond](day-67.md)（BSD→Mach）

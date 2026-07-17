@@ -71,6 +71,7 @@
 - **Day 64：** [docs/day-64.md](docs/day-64.md) · [分析](notes/daily/day-64-analysis.md)（`revoke` / `acct` / `gethostuuid` / `minherit` / `swapon`）
 - **Day 65：** [docs/day-65.md](docs/day-65.md) · [分析](notes/daily/day-65-analysis.md)（`proc_info` / `csops` / `workq_*`）
 - **Day 66：** [docs/day-66.md](docs/day-66.md) · [分析](notes/daily/day-66-analysis.md)（`thread_selfid` / `ledger` / `csrctl` / `ulock_*`；标 BSD/Mach）
+- **Day 67：** [docs/day-67.md](docs/day-67.md) · [分析](notes/daily/day-67-analysis.md)（`psynch_*` mutex/cond；BSD→Mach）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）
