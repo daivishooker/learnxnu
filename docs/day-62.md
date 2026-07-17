@@ -108,12 +108,14 @@ daemon 经典三步里常有：`fork` → 父退出 → **`setsid`** → 再 `fo
 ```c
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 int main(void) {
     pid_t pid = getpid();
     pid_t pgid = getpgrp();
     pid_t pgid2 = getpgid(0);
     pid_t sid = getsid(0);
+    pid_t c;
 
     printf("pid=%d getpgrp=%d getpgid(0)=%d getsid(0)=%d\n",
            (int)pid, (int)pgid, (int)pgid2, (int)sid);
@@ -123,23 +125,21 @@ int main(void) {
         return 1;
     }
 
-    /*
-     * 若当前已是组长，setsid 会 EPERM——先 setpgid 到「以自己为新组」
-     * 在已是组长时也会失败；Demo 只演示读侧 + 尝试 setsid。
-     */
-    if (setsid() == -1) {
-        perror("setsid (often EPERM if already leader)");
-    } else {
-        printf("setsid ok new sid/pgid=%d\n", (int)getpid());
-        printf("after setsid: pgid=%d sid=%d\n",
-               (int)getpgrp(), (int)getsid(0));
+    /* 子进程里 setsid：新建会话；成功后已是会话首领，不能再 setpgid */
+    c = fork();
+    if (c < 0) { perror("fork"); return 1; }
+    if (c == 0) {
+        if (setsid() < 0) { perror("setsid"); return 1; }
+        printf("child setsid ok sid=%d pgid=%d\n",
+               (int)getsid(0), (int)getpgrp());
+        return 0;
     }
-
-    /* setpgid(0,0)：把自己放进以自己 pid 为号的组（已是则成功/无操作） */
-    if (setpgid(0, 0) != 0) {
-        perror("setpgid");
-    } else {
-        printf("setpgid(0,0) ok pgid=%d\n", (int)getpgrp());
+    {
+        int st;
+        if (waitpid(c, &st, 0) < 0 || !WIFEXITED(st) || WEXITSTATUS(st) != 0) {
+            fprintf(stderr, "child failed\n");
+            return 1;
+        }
     }
 
     printf("day62 ok\n");
