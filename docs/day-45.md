@@ -145,4 +145,4 @@ cc -o day45_demo day45_demo.c && ./day45_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-45.md`
 
-下一步：Day 46 → `truncate` / `ftruncate`（#200 / #201）
+下一步：Day 46 → [`truncate` / `ftruncate`](day-46.md)（#200 / #201）
