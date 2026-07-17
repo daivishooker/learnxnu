@@ -130,7 +130,8 @@
 | Day 38 | 2 | `setattrlist` / `fgetattrlist` | 221 / 228 | 写属性与按 FD 查属性 → **正文：[day-38.md](day-38.md)** |
 | Day 39 | 2 | `exchangedata` / `copyfile` | 223 / 227 | 原子交换内容与内核侧拷贝 → **正文：[day-39.md](day-39.md)** |
 | Day 40 | 2 | `clonefileat` / `fclonefileat` | 462 / 517 | APFS 风格克隆（写时复制） → **正文：[day-40.md](day-40.md)** |
-| Day 41 | 2 | `searchfs` / `fsgetpath` | 225 / 427 | 目录树搜索与 fsid/objid → 路径 |
+| Day 41 | 2 | `searchfs` / `fsgetpath` | 225 / 427 | 目录树搜索与 fsid/objid → 路径 → **正文：[day-41.md](day-41.md)** |
+| Day 42 | 2 | `getxattr` / `setxattr` | 234 / 236 | 扩展属性读写 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -208,6 +209,7 @@
 30. 接着 **[Day 38](day-38.md)**：`setattrlist` / `fgetattrlist`  
 31. 接着 **[Day 39](day-39.md)**：`exchangedata` / `copyfile`  
 32. 接着 **[Day 40](day-40.md)**：`clonefileat` / `fclonefileat`  
-33. 对照填写 `notes/daily/day-0N.md`  
+33. 接着 **[Day 41](day-41.md)**：`searchfs` / `fsgetpath`  
+34. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 41** → `searchfs` / `fsgetpath`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 42** → `getxattr` / `setxattr`。

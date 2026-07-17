@@ -165,4 +165,4 @@ cc -o day40_demo day40_demo.c && ./day40_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-40.md`
 
-下一步：Day 41 → `searchfs` / `fsgetpath`（#225 / #427）
+下一步：Day 41 → [`searchfs` / `fsgetpath`](day-41.md)（#225 / #427）
