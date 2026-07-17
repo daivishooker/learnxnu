@@ -1,21 +1,26 @@
-# 每日系统调用计划（每天 2–3 个）
+# 每日系统调用计划
 
 基于仓库内源码：`xnu/`（**xnu-12377.121.6**）。
 
-节奏：**每天只学 2 或 3 个 syscall**。先跟完共用入口，再按表推进。不要一天啃整张 `sysent`。
+节奏：
+
+- **Day 1–56：** 每天 2–3 个（打基础）  
+- **Day 57 起：** 每天 **5–10 个**（同族/同子系统打包推进）  
+
+先跟完共用入口，再按表推进。同族扫尾时可多记「汇入哪条 internal」，少重复抠细节。
 
 ---
 
-## 每天固定流程（约 1–2 小时）
+## 每天固定流程
 
-对当天每个调用，按同一模板走完：
+对当天每个调用（或同族一组），按同一模板走完：
 
 1. 在 `xnu/bsd/kern/syscalls.master` 找到编号与原型  
 2. 找到 handler 实现（通常在 `xnu/bsd/kern/` 或相关子系统）  
 3. 画一条最短调用链：用户态 stub → 陷阱 → 分发 → handler → 返回  
 4. 标出：参数、`copyin`/`copyout`、用到的 `proc`/`fileproc`/`vnode` 等对象  
-5. 若方便：写 10 行 C 调用它，用 `dtruss` 对一下编号  
-6. 在 `notes/daily/day-NN.md` 写半页笔记（复制下方模板即可）
+5. 若方便：写可编译 Demo（一天可共用一个 Demo 覆盖多个调用）  
+6. 在 `notes/daily/day-NN.md` 写笔记（复制下方模板即可）
 
 ### 笔记模板
 
@@ -146,9 +151,17 @@
 | Day 54 | 2 | `renameat` / `unlinkat` | 465 / 472 | 相对目录 FD 重命名与删除 → **正文：[day-54.md](day-54.md)** |
 | Day 55 | 2 | `mkdirat` / `faccessat` | 475 / 466 | 相对目录 FD 建目录与权限探测 → **正文：[day-55.md](day-55.md)** |
 | Day 56 | 2 | `fchmodat` / `fchownat` | 467 / 468 | 相对目录 FD 改权限与属主 → **正文：[day-56.md](day-56.md)** |
-| Day 57 | 2 | `linkat` / `getattrlistat` | 471 / 476 | 相对目录 FD 硬链接与按路径取属性 |
+| Day 57 | 6 | `linkat` / `getattrlistat` / `setattrlistat` / `renameatx_np` / `mkfifoat` / `mknodat` | 471 / 476 / 524 / 488 / 553 / 554 | `*at` 家族扫尾 → **正文：[day-57.md](day-57.md)** |
+| Day 58 | 6 | `fgetxattr` / `fsetxattr` / `flistxattr` / `fremovexattr` / `fsetattrlist` / `getdirentriesattr` | 235 / 237 / 241 / 239 / 229 / 222 | FD/目录侧属性扫尾 |
+| Day 59 | 6 | `sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries`（旧）/ `access_extended` | 337 / 187 / 133 / 29 / 196 / 284 | 零拷贝发送、刷盘、套接字收发与杂项扫尾 |
 
-> **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
+> **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例（可一天一个 Demo 覆盖多个调用）。
+
+### Day 57 起打包原则
+
+- 同族一次收（如整组 `*at`、整组 `f*xattr`）  
+- 每天目标 **5–10**；少于 5 只在扫尾不足时允许  
+- 旧 cwd API 若已汇入 `*at_internal`，正文里一行对照即可，不必再开一天
 
 ---
 
@@ -240,6 +253,7 @@
 46. 接着 **[Day 54](day-54.md)**：`renameat` / `unlinkat`  
 47. 接着 **[Day 55](day-55.md)**：`mkdirat` / `faccessat`  
 48. 接着 **[Day 56](day-56.md)**：`fchmodat` / `fchownat`  
-49. 对照填写 `notes/daily/day-0N.md`  
+49. 接着 **[Day 57](day-57.md)**：`*at` 家族扫尾（6 个）  
+50. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 57** → `linkat` / `getattrlistat`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 58** → FD/目录侧属性扫尾（6 个）。

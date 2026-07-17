@@ -165,4 +165,4 @@ cc -o day56_demo day56_demo.c && ./day56_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-56.md`
 
-下一步：Day 57 → `linkat` / `getattrlistat`（#471 / #476）
+下一步：Day 57 → [`*at` 扫尾六件套](day-57.md)（#471 / #476 / #524 / #488 / #553 / #554）
