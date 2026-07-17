@@ -284,6 +284,7 @@
 58. 接着 **[Day 66](day-66.md)**：thread/ledger/csrctl/ulock（6 个，标 BSD/Mach）  
 59. 接着 **[Day 67](day-67.md)**：psynch mutex/cond（5 个，BSD→Mach）  
 60. 接着 **[Day 68](day-68.md)**：psynch rwlock（5 个，BSD→Mach）  
-61. 对照填写 `notes/daily/day-0N.md`  
+61. 接着 **[Day 69](day-69.md)**：psynch 扫尾 + bsdthread create/terminate（5 个）  
+62. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 69** → psynch 扫尾 + `bsdthread_create` / `terminate`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 70** → `bsdthread_register` / `ctl` + pthread 取消相关。
