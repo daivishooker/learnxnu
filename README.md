@@ -2,7 +2,7 @@
 
 学习 Apple XNU 内核的笔记与源码仓库。
 
-## Day 1–51 在这里
+## Day 1–52 在这里
 
 - **Day 1–7（第 1 周）：** 见下方历史条目 / [日程](docs/DAILY_SYSCALL_PLAN.md)
 - **Day 1：** [docs/day-01.md](docs/day-01.md) · [分析](notes/daily/day-01-analysis.md)
@@ -56,6 +56,7 @@
 - **Day 49：** [docs/day-49.md](docs/day-49.md) · [分析](notes/daily/day-49-analysis.md)（`symlink` / `symlinkat`）
 - **Day 50：** [docs/day-50.md](docs/day-50.md) · [分析](notes/daily/day-50-analysis.md)（`mknod` / `mkfifo`）
 - **Day 51：** [docs/day-51.md](docs/day-51.md) · [分析](notes/daily/day-51-analysis.md)（`chflags` / `fchflags`）
+- **Day 52：** [docs/day-52.md](docs/day-52.md) · [分析](notes/daily/day-52-analysis.md)（`getattrlistbulk` / `fsctl`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
 ## XNU 源码（已放入本仓库）

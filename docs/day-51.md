@@ -140,4 +140,4 @@ cc -o day51_demo day51_demo.c && ./day51_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-51.md`
 
-下一步：Day 52 → `getattrlistbulk` / `fsctl`（#461 / #242）
+下一步：Day 52 → [`getattrlistbulk` / `fsctl`](day-52.md)（#461 / #242）
