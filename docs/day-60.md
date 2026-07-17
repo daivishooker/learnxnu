@@ -156,4 +156,4 @@ cc -o day60_demo day60_demo.c && ./day60_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-60.md`
 
-下一步：Day 61 → `getgroups` / `setgroups` / `initgroups`（若有）/ `getlogin` / `setlogin` / `chroot`
+下一步：Day 61 → [补充组 / login / chroot](day-61.md)
