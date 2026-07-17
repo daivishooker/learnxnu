@@ -121,4 +121,4 @@ cc -o day49_demo day49_demo.c && ./day49_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-49.md`
 
-下一步：Day 50 → `mknod` / `mkfifo`（#14 / #132）
+下一步：Day 50 → [`mknod` / `mkfifo`](day-50.md)（#14 / #132）
