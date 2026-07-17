@@ -165,4 +165,4 @@ cc -o day61_demo day61_demo.c && ./day61_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-61.md`
 
-下一步：Day 62 → 进程组/会话（`getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid` 等）
+下一步：Day 62 → [进程组与会话](day-62.md)（`getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid`）

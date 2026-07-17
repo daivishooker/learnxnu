@@ -156,7 +156,8 @@
 | Day 59 | 6 | `sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries`（旧）/ `access_extended` | 337 / 187 / 133 / 29 / 196 / 284 | 零拷贝发送、刷盘、套接字收发与杂项扫尾 → **正文：[day-59.md](day-59.md)** |
 | Day 60 | 6 | `setuid` / `setgid` / `seteuid` / `setegid` / `setreuid` / `setregid` | 23 / 181 / 183 / 182 / 126 / 127 | 凭证变更扫尾 → **正文：[day-60.md](day-60.md)** |
 | Day 61 | 6 | `getgroups` / `setgroups` / `initgroups` / `getlogin` / `setlogin` / `chroot` | 79 / 80 / 243 / 49 / 50 / 61 | 补充组、登录名与 chroot → **正文：[day-61.md](day-61.md)** |
-| Day 62 | 5 | `getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid` | 81 / 82 / 147 / 151 / 310 | 进程组与会话 |
+| Day 62 | 5 | `getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid` | 81 / 82 / 147 / 151 / 310 | 进程组与会话 → **正文：[day-62.md](day-62.md)** |
+| Day 63 | 5 | `umask` / `mlock` / `munlock` / `mlockall` / `munlockall` | 60 / 203 / 204 / 324 / 325 | 默认权限掩码与内存锁定 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例（可一天一个 Demo 覆盖多个调用）。
 
@@ -261,6 +262,7 @@
 51. 接着 **[Day 59](day-59.md)**：sendfile / 刷盘 / 套接字收发杂项（6 个）  
 52. 接着 **[Day 60](day-60.md)**：凭证变更扫尾（6 个）  
 53. 接着 **[Day 61](day-61.md)**：补充组 / login / chroot（6 个）  
-54. 对照填写 `notes/daily/day-0N.md`  
+54. 接着 **[Day 62](day-62.md)**：进程组与会话（5 个）  
+55. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 62** → `getpgrp` / `setpgid` / `setsid` / `getpgid` / `getsid`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 63** → `umask` / `mlock` / `munlock` / `mlockall` / `munlockall`。
