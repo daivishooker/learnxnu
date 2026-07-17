@@ -152,7 +152,7 @@
 | Day 55 | 2 | `mkdirat` / `faccessat` | 475 / 466 | 相对目录 FD 建目录与权限探测 → **正文：[day-55.md](day-55.md)** |
 | Day 56 | 2 | `fchmodat` / `fchownat` | 467 / 468 | 相对目录 FD 改权限与属主 → **正文：[day-56.md](day-56.md)** |
 | Day 57 | 6 | `linkat` / `getattrlistat` / `setattrlistat` / `renameatx_np` / `mkfifoat` / `mknodat` | 471 / 476 / 524 / 488 / 553 / 554 | `*at` 家族扫尾 → **正文：[day-57.md](day-57.md)** |
-| Day 58 | 6 | `fgetxattr` / `fsetxattr` / `flistxattr` / `fremovexattr` / `fsetattrlist` / `getdirentriesattr` | 235 / 237 / 241 / 239 / 229 / 222 | FD/目录侧属性扫尾 |
+| Day 58 | 6 | `fgetxattr` / `fsetxattr` / `flistxattr` / `fremovexattr` / `fsetattrlist` / `getdirentriesattr` | 235 / 237 / 241 / 239 / 229 / 222 | FD/目录侧属性扫尾 → **正文：[day-58.md](day-58.md)** |
 | Day 59 | 6 | `sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries`（旧）/ `access_extended` | 337 / 187 / 133 / 29 / 196 / 284 | 零拷贝发送、刷盘、套接字收发与杂项扫尾 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例（可一天一个 Demo 覆盖多个调用）。
@@ -254,6 +254,7 @@
 47. 接着 **[Day 55](day-55.md)**：`mkdirat` / `faccessat`  
 48. 接着 **[Day 56](day-56.md)**：`fchmodat` / `fchownat`  
 49. 接着 **[Day 57](day-57.md)**：`*at` 家族扫尾（6 个）  
-50. 对照填写 `notes/daily/day-0N.md`  
+50. 接着 **[Day 58](day-58.md)**：FD/目录侧属性扫尾（6 个）  
+51. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 58** → FD/目录侧属性扫尾（6 个）。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 59** → `sendfile` / `fdatasync` / `sendto` / `recvfrom` / `getdirentries` / `access_extended`。

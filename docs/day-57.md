@@ -211,4 +211,4 @@ cc -o day57_demo day57_demo.c && ./day57_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-57.md`
 
-下一步：Day 58 → FD 侧 xattr / attrlist 扫尾（`fgetxattr` / `fsetxattr` / `flistxattr` / `fremovexattr` / `fsetattrlist` / `getdirentriesattr`）
+下一步：Day 58 → [FD/目录侧属性扫尾](day-58.md)（`f*xattr` / `fsetattrlist` / `getdirentriesattr`）
