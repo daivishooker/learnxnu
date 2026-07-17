@@ -146,4 +146,4 @@ cc -o day43_demo day43_demo.c && ./day43_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-43.md`
 
-下一步：Day 44 → `chmod` / `chown`（#15 / #16）
+下一步：Day 44 → [`chmod` / `chown`](day-44.md)（#15 / #16）

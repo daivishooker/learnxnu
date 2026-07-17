@@ -133,7 +133,8 @@
 | Day 41 | 2 | `searchfs` / `fsgetpath` | 225 / 427 | 目录树搜索与 fsid/objid → 路径 → **正文：[day-41.md](day-41.md)** |
 | Day 42 | 2 | `getxattr` / `setxattr` | 234 / 236 | 扩展属性读写 → **正文：[day-42.md](day-42.md)** |
 | Day 43 | 2 | `listxattr` / `removexattr` | 240 / 238 | 列出与删除扩展属性 → **正文：[day-43.md](day-43.md)** |
-| Day 44 | 2 | `chmod` / `chown` | 15 / 16 | 权限位与属主/属组 |
+| Day 44 | 2 | `chmod` / `chown` | 15 / 16 | 权限位与属主/属组 → **正文：[day-44.md](day-44.md)** |
+| Day 45 | 2 | `utimes` / `futimes` | 138 / 139 | 改访问/修改时间（路径 vs FD） |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -214,6 +215,7 @@
 33. 接着 **[Day 41](day-41.md)**：`searchfs` / `fsgetpath`  
 34. 接着 **[Day 42](day-42.md)**：`getxattr` / `setxattr`  
 35. 接着 **[Day 43](day-43.md)**：`listxattr` / `removexattr`  
-36. 对照填写 `notes/daily/day-0N.md`  
+36. 接着 **[Day 44](day-44.md)**：`chmod` / `chown`  
+37. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 44** → `chmod` / `chown`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 45** → `utimes` / `futimes`。
