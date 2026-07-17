@@ -87,7 +87,6 @@
 | 518 | fs_snapshot | APFS 等快照操作 |
 | 455 | vfs_purge | 丢弃 VFS 缓存 |
 | 537 | pivot_root | 切换根文件系统 |
-| 526 | *(若未覆盖)* fmount | 按 FD 挂载类操作（以 master 为准） |
 
 ---
 
@@ -296,7 +295,6 @@ Day 72 计划：`getauid` / `setauid`。
 | 456–457 | sfi_ctl / sfi_pidctl | Selective Forced Idle |
 | 549 / 555 | graftdmg / ungraftdmg | DMG graft 挂载相关 |
 | 546 | tracker_action | tracker 动作 |
-| 55+ | （平台相关） | 以 `syscalls.master` 注释为准 |
 
 ---
 
