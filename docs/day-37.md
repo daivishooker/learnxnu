@@ -143,4 +143,4 @@ cc -o day37_demo day37_demo.c && ./day37_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-37.md`
 
-下一步：Day 38 → `setattrlist` / `fgetattrlist`（写属性 / FD 版读属性）
+下一步：Day 38 → [`setattrlist` / `fgetattrlist`](day-38.md)——写属性与按 FD 查属性。

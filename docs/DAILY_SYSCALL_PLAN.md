@@ -127,7 +127,8 @@
 | Day 35 | 2 | `statfs64` / `fstatfs64` | 345 / 346 | 文件系统统计 → **正文：[day-35.md](day-35.md)** |
 | Day 36 | 1–2 | `getfsstat64` | 347 | 列举各挂载点统计 → **正文：[day-36.md](day-36.md)** |
 | Day 37 | 2 | `getdirentries64` / `getattrlist` | 344 / 220 | 目录枚举与批量属性查询 → **正文：[day-37.md](day-37.md)** |
-| Day 38 | 2 | `setattrlist` / `fgetattrlist` | 221 / 228 | 写属性与按 FD 查属性 |
+| Day 38 | 2 | `setattrlist` / `fgetattrlist` | 221 / 228 | 写属性与按 FD 查属性 → **正文：[day-38.md](day-38.md)** |
+| Day 39 | 2 | `exchangedata` / `copyfile` | 223 / 227 | 原子交换内容与内核侧拷贝 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -202,6 +203,7 @@
 27. 接着 **[Day 35](day-35.md)**：`statfs64` / `fstatfs64`  
 28. 接着 **[Day 36](day-36.md)**：`getfsstat64`  
 29. 接着 **[Day 37](day-37.md)**：`getdirentries64` / `getattrlist`  
-30. 对照填写 `notes/daily/day-0N.md`  
+30. 接着 **[Day 38](day-38.md)**：`setattrlist` / `fgetattrlist`  
+31. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 38** → `setattrlist` / `fgetattrlist`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 39** → `exchangedata` / `copyfile`。
