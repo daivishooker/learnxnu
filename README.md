@@ -71,6 +71,14 @@
 - **Day 64：** [docs/day-64.md](docs/day-64.md) · [分析](notes/daily/day-64-analysis.md)（`revoke` / `acct` / `gethostuuid` / `minherit` / `swapon`）
 - 完整每日日程： [docs/DAILY_SYSCALL_PLAN.md](docs/DAILY_SYSCALL_PLAN.md)
 
+## Android APK 加固（补充专题）
+
+自有应用发布前的防护基线（R8、签名完整性、运行时信号、Native 辅助）：
+
+- 总览：[docs/android/APK_HARDENING.md](docs/android/APK_HARDENING.md)
+- 笔记：[notes/android-apk-hardening/](notes/android-apk-hardening/)
+- 样例代码：[samples/apk-hardening/](samples/apk-hardening/)
+
 ## XNU 源码（已放入本仓库）
 
 目录 [`xnu/`](xnu/) 是当前最新已发布标签的一份拷贝：
@@ -91,7 +99,9 @@
 ## 目录
 
 ```
-xnu/                 # 上游 XNU 源码拷贝
-docs/                # 学习计划
-notes/daily/         # 每日 syscall 笔记
+xnu/                         # 上游 XNU 源码拷贝
+docs/                        # 学习计划（含 android/ APK 加固指南）
+notes/daily/                 # 每日 syscall 笔记
+notes/android-apk-hardening/ # APK 加固专题笔记
+samples/apk-hardening/       # 可复用加固样例（Kotlin / NDK / R8）
 ```
