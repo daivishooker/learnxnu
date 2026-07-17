@@ -132,7 +132,8 @@
 | Day 40 | 2 | `clonefileat` / `fclonefileat` | 462 / 517 | APFS 风格克隆（写时复制） → **正文：[day-40.md](day-40.md)** |
 | Day 41 | 2 | `searchfs` / `fsgetpath` | 225 / 427 | 目录树搜索与 fsid/objid → 路径 → **正文：[day-41.md](day-41.md)** |
 | Day 42 | 2 | `getxattr` / `setxattr` | 234 / 236 | 扩展属性读写 → **正文：[day-42.md](day-42.md)** |
-| Day 43 | 2 | `listxattr` / `removexattr` | 240 / 238 | 列出与删除扩展属性 |
+| Day 43 | 2 | `listxattr` / `removexattr` | 240 / 238 | 列出与删除扩展属性 → **正文：[day-43.md](day-43.md)** |
+| Day 44 | 2 | `chmod` / `chown` | 15 / 16 | 权限位与属主/属组 |
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例。
 
@@ -212,6 +213,7 @@
 32. 接着 **[Day 40](day-40.md)**：`clonefileat` / `fclonefileat`  
 33. 接着 **[Day 41](day-41.md)**：`searchfs` / `fsgetpath`  
 34. 接着 **[Day 42](day-42.md)**：`getxattr` / `setxattr`  
-35. 对照填写 `notes/daily/day-0N.md`  
+35. 接着 **[Day 43](day-43.md)**：`listxattr` / `removexattr`  
+36. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 43** → `listxattr` / `removexattr`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 44** → `chmod` / `chown`。

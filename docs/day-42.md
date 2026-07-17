@@ -130,4 +130,4 @@ cc -o day42_demo day42_demo.c && ./day42_demo
 - [ ] 跑通 Demo  
 - [ ] 填好 `notes/daily/day-42.md`
 
-下一步：Day 43 → `listxattr` / `removexattr`（#240 / #238）
+下一步：Day 43 → [`listxattr` / `removexattr`](day-43.md)（#240 / #238）
