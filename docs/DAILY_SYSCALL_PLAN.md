@@ -160,7 +160,16 @@
 | Day 63 | 5 | `umask` / `mlock` / `munlock` / `mlockall` / `munlockall` | 60 / 203 / 204 / 324 / 325 | 默认权限掩码与内存锁定 → **正文：[day-63.md](day-63.md)** |
 | Day 64 | 5 | `revoke` / `acct` / `gethostuuid` / `minherit` / `swapon` | 56 / 51 / 142 / 250 / 85 | 杂项：吊销、记账、UUID、继承、交换 → **正文：[day-64.md](day-64.md)** |
 | Day 65 | 5 | `proc_info` / `csops` / `csops_audittoken` / `workq_open` / `workq_kernreturn` | 336 / 169 / 170 / 367 / 368 | 进程信息、代码签名与 workqueue → **正文：[day-65.md](day-65.md)** |
-| Day 66 | 6 | `thread_selfid` / `thread_selfusage` / `ledger` / `csrctl` / `ulock_wait` / `ulock_wake` | 372 / 482 / 373 / 483 / 515 / 516 | 线程 ID/用量、ledger、CSR 与用户锁 |
+| Day 66 | 6 | `thread_selfid` / `thread_selfusage` / `ledger` / `csrctl` / `ulock_wait` / `ulock_wake` | 372 / 482 / 373 / 483 / 515 / 516 | 线程/ledger/CSR/ulock（标 BSD/Mach）→ **正文：[day-66.md](day-66.md)** |
+| Day 67 | 5 | `psynch_mutexwait` / `psynch_mutexdrop` / `psynch_cvwait` / `psynch_cvsignal` / `psynch_cvbroad` | 301 / 302 / 305 / 304 / 303 | pthread 同步（BSD→Mach） |
+
+### Day 66 起标注约定
+
+正文总表须标 **BSD** / **BSD→Mach** / **Mach trap**：
+
+- **BSD**：`syscalls.master` 入口，逻辑主要在 `bsd/`  
+- **BSD→Mach**：仍是 BSD syscall，实现落到 `task`/`thread`/VM（`osfmk/`）  
+- **Mach trap**：走 `mach_trap_table`，不是 `sysent` 编号
 
 > **约定（Day 36 起强制，Day 1–35 已补）：** 每天正文须含 **「用户层 Demo」** 可编译短例（可一天一个 Demo 覆盖多个调用）。
 
@@ -269,6 +278,7 @@
 55. 接着 **[Day 63](day-63.md)**：umask 与 mlock 族（5 个）  
 56. 接着 **[Day 64](day-64.md)**：revoke / acct / UUID / minherit / swapon（5 个）  
 57. 接着 **[Day 65](day-65.md)**：proc_info / csops / workq（5 个）  
-58. 对照填写 `notes/daily/day-0N.md`  
+58. 接着 **[Day 66](day-66.md)**：thread/ledger/csrctl/ulock（6 个，标 BSD/Mach）  
+59. 对照填写 `notes/daily/day-0N.md`  
 
-完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 66** → `thread_selfid` / `ledger` / `csrctl` / `ulock_*`。
+完成 Day 7 后再进入第 2 周；不要跳周。下一步：**Day 67** → `psynch_*`（pthread 同步）。

@@ -160,4 +160,4 @@ cc -o day65_demo day65_demo.c && ./day65_demo
 - [ ] 能说 workq 服务 libpthread/GCD  
 - [ ] 填好 `notes/daily/day-65.md`
 
-下一步：Day 66 → `thread_selfid` / `thread_selfusage` / `ledger` / `csrctl` / `ulock_wait` / `ulock_wake`
+下一步：Day 66 → [thread / ledger / csrctl / ulock](day-66.md)（起标注 BSD/Mach）
