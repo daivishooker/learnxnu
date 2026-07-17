@@ -137,4 +137,4 @@ cc -o day44_demo day44_demo.c && ./day44_demo
 - [ ] 跑通 Demo（chmod 为重点）  
 - [ ] 填好 `notes/daily/day-44.md`
 
-下一步：Day 45 → `utimes` / `futimes`（#138 / #139）
+下一步：Day 45 → [`utimes` / `futimes`](day-45.md)（#138 / #139）
