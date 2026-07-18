@@ -2,7 +2,7 @@
 
 > 基准源码：本仓库 `xnu/` = **xnu-12377.121.6**  
 > 范围：内核 **MAC Framework（开源）** + **Sandbox.kext / 应用层接口（闭源，据公开资料与 XNU 挂接点还原）**  
-> 相关：[`SYSCALL_SECURITY_WHITEPAPER.md`](SYSCALL_SECURITY_WHITEPAPER.md)（`__mac_*` / `csops`）· Day 65 `csops` / Day 61 `chroot`
+> 相关：[`XNU_AMFI_MECHANISM.md`](XNU_AMFI_MECHANISM.md) · [`XNU_PPL_MECHANISM.md`](XNU_PPL_MECHANISM.md) · [`XNU_MTE_MECHANISM.md`](XNU_MTE_MECHANISM.md) · [`SYSCALL_SECURITY_WHITEPAPER.md`](SYSCALL_SECURITY_WHITEPAPER.md) · Day 65 `csops` / Day 61 `chroot`
 
 ---
 

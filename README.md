@@ -81,6 +81,9 @@
 - **Mach trap 地图（须单独记账）：** [docs/MACH_TRAPS.md](docs/MACH_TRAPS.md)
 - **系统调用安全白皮书（全部 BSD + Mach，SEC 标记 + Demo）：** [docs/SYSCALL_SECURITY_WHITEPAPER.md](docs/SYSCALL_SECURITY_WHITEPAPER.md) · [demos/whitepaper/](demos/whitepaper/)
 - **XNU 沙盒机制白皮书（MACF + Sandbox.kext + 应用层接口）：** [docs/XNU_SANDBOX_MECHANISM.md](docs/XNU_SANDBOX_MECHANISM.md)
+- **XNU AMFI 机制白皮书（代码签名 + csops + Trust Cache）：** [docs/XNU_AMFI_MECHANISM.md](docs/XNU_AMFI_MECHANISM.md)
+- **XNU PPL / SPTM / TXM 白皮书（页表与签名监视器）：** [docs/XNU_PPL_MECHANISM.md](docs/XNU_PPL_MECHANISM.md)
+- **XNU MTE 机制白皮书（Memory Tagging + VM_FLAGS_MTE）：** [docs/XNU_MTE_MECHANISM.md](docs/XNU_MTE_MECHANISM.md)
 - **LeoCounter 学习看板（独立线）：** [docs/leocounter/](docs/leocounter/) · 源码 [`projects/leocounter/`](projects/leocounter/)
 - **LiveContainer 学习看板（独立线）：** [docs/livecontainer/](docs/livecontainer/)（[机制](docs/livecontainer/MECHANISM.md) · [启动跟读](docs/livecontainer/STARTUP_TRACE.md)）· 源码 [`projects/LiveContainer/`](projects/LiveContainer/)
 
