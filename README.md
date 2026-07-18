@@ -84,6 +84,14 @@
 - **LeoCounter 学习看板（独立线）：** [docs/leocounter/](docs/leocounter/) · 源码 [`projects/leocounter/`](projects/leocounter/)
 - **LiveContainer 学习看板（独立线）：** [docs/livecontainer/](docs/livecontainer/)（[机制](docs/livecontainer/MECHANISM.md) · [启动跟读](docs/livecontainer/STARTUP_TRACE.md)）· 源码 [`projects/LiveContainer/`](projects/LiveContainer/)
 
+## Android APK 加固（补充专题）
+
+**主路径：对已有 APK 加固**（注入 Application 壳 → 重签），也可接商业壳后再签：
+
+- 总览：[docs/android/APK_HARDENING.md](docs/android/APK_HARDENING.md)
+- 流水线：[samples/apk-hardening/pipeline/](samples/apk-hardening/pipeline/)（`harden-existing-apk.sh`）
+- 笔记：[notes/android-apk-hardening/](notes/android-apk-hardening/)
+
 ## XNU 源码（已放入本仓库）
 
 目录 [`xnu/`](xnu/) 是当前最新已发布标签的一份拷贝：
@@ -104,7 +112,9 @@
 ## 目录
 
 ```
-xnu/                 # 上游 XNU 源码拷贝
-docs/                # 学习计划
-notes/daily/         # 每日 syscall 笔记
+xnu/                         # 上游 XNU 源码拷贝
+docs/                        # 学习计划（含 android/ APK 加固指南）
+notes/daily/                 # 每日 syscall 笔记
+notes/android-apk-hardening/ # APK 加固专题笔记
+samples/apk-hardening/       # 可复用加固样例（Kotlin / NDK / R8）
 ```
